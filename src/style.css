@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 60px 0 0 0;
+}
+ 
+#page {
+    margin: 0px auto;
+    width: 100%;
+}
+ 
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #36D8E5;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+h1{
+    font-family: 'Arial Narrow Bold', sans-serif; /*Tipo de letra*/
+    text-align: center;
+    font-size: 25px; /*Tamaño de la letra*/
+    font-weight: 300; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
+    color: black;
+  }
+  
+  h2{
+    font-family: 'Arial Narrow Bold', sans-serif; /*Tipo de letra*/
+    text-align: justify;
+    padding:10px;
+    margin-left: 18%;
+    margin-right: 18%;
+    font-size: 25px; /*Tamaño de la letra*/
+    font-weight: 400; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
+    color: black;
+  }
+
+/*Propiedades el botón de la primer pantalla*/
+  #displayOne{
+    padding:10px;
+    margin-top: 2%;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 3%;
+    background
