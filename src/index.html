@@ -2,28 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Rick and Morty Universe</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
 
-      <div id="displayOne" >
+      <div id="displayOne" class="displayOne">
           <div>
             <h1>Welcome to Rick and Morty Universe</h1>
-            <p>La principal funcionalidad de esta app web, es poder introducir anuevos usuarios al mundo de Rick y Morty, llevandolos a conocer a los personajes a través de distintas categorías</p>
+            <p class="description">La principal funcionalidad de esta app web, es poder introducir anuevos usuarios al mundo de Rick y Morty, llevandolos a conocer a los personajes a través de distintas categorías</p>
             <button value="inicio" style="cursor:pointer" id="next" class="btn-siguiente">Conoce más</button> 
 
           </div>
       </div>
 
       <div id="displayTwo" style="display:none">
-          <h2>Si funciono</h2>
-          <div id="area"></div>
+          <button id="hamburguer">
+            <hr> 
+            <hr>
+            <hr>
+          </button>
+          <nav id="options-menu" class="disabled-menu">
+            <ul> 
+              <li><a href="#">Filter</a></li>
+              <li><a href="#">Order</a></li>
+              <li><a href="#">Opcion 3</a></li>
+            </ul>
+          </nav>
+          <section id="area"></section>
+          
       </div>
 
-
+      <footer>
+        <div class='define'>
+            <p>Data Lovers 2021</p>
+        </div>
+    </footer>
 
   </body>
 </html>
