@@ -1,7 +1,10 @@
 // estas funciones son de ejemplo
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js';
+//import rickandmorty from './data/rickandmorty/rickandmorty.js';
+//import { data } from './data.js';
+//export const rickandmorty = data.results;
 
-export const pokemons = data.pokemon;
+//export const pokemons = data.pokemon;
 
 export const example = () => {
   return 'example';
