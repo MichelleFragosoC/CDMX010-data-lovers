@@ -3,7 +3,7 @@
 //import data from './data/pokemon/pokemon.js';
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
 
-
+ 
 let personajes = rickandmorty.results;
 
 document.getElementById('next').addEventListener("click", function(){
@@ -15,17 +15,17 @@ document.getElementById('next').addEventListener("click", function(){
 
         let showAll = personajes.map((element) =>{
             return  `
-                <section class="card" id="cards">
                 <div class="card">
-                <img src="${element.image}"/> 
-                <h2> Name: ${element.name}</h2>
-                <p class="status"> Status: ${element.status}</p>
-                <p class="gender"> Gender: ${element.gender}</p>
-                <p class="origin"> Origin: ${element.origin.name}</p>
-                <p> Species: ${element.species}</p>
-                <p> Type: ${element.type}</p>
-                </div>
-                </section>
+                    <img src="${element.image}"/> 
+                    <div>
+                        <h4> Name: ${element.name}</h4>
+                        <p class="status"> Status: ${element.status}</p>
+                        <p class="gender"> Gender: ${element.gender}</p>
+                        <p class="origin"> Origin: ${element.origin.name}</p>
+                        <p> Species: ${element.species}</p>
+                        <p> Type: ${element.type}</p>
+                    </div>
+                </div> 
                 `;
             }).join(" ");
             document.getElementById("area").innerHTML = showAll;
@@ -49,13 +49,36 @@ document.getElementById('next').addEventListener("click", function(){
 
         boton.addEventListener("click", showMenu);
 
+
         // **Función para el filtrado
 
+        const buttonFilter = document.getElementById("select_filter");
+        buttonFilter.addEventListener("change", function genderFiltered(){
+        let genderUser = document.getElementById("filGender").value;
+        console.log(genderUser);
 
+    
+            let filterGender = personajes.filter(f => f.gender == genderUser)
+            let genderFiltered = filterGender.map((element)=>{
 
+                return  `
+                <div class="card">
+                    <img src="${element.image}"/> 
+                    <div>
+                        <h4> Name: ${element.name}</h4>
+                        <p class="status"> Status: ${element.status}</p>
+                        <p class="gender"> Gender: ${element.gender}</p>
+                        <p class="origin"> Origin: ${element.origin.name}</p>
+                        <p> Species: ${element.species}</p>
+                        <p> Type: ${element.type}</p>
+                    </div>
+                </div> 
+                `
+            }).join(" ");
+            document.getElementById("area").innerHTML = genderFiltered;
+        });
 
-
-
+       
     });
 
 

@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>Rick and Morty Universe</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontello.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div id="root"></div>
@@ -11,14 +15,19 @@
 
       <div id="displayOne" class="displayOne">
           <div>
-            <h1>Welcome to Rick and Morty Universe</h1>
-            <p class="description">La principal funcionalidad de esta app web, es poder introducir anuevos usuarios al mundo de Rick y Morty, llevandolos a conocer a los personajes a través de distintas categorías</p>
-            <button value="inicio" style="cursor:pointer" id="next" class="btn-siguiente">Conoce más</button> 
+            <h1 class="typing"><strong>Welcome to Rick & Morty Universe</strong></h1>
+            <p class="description">Esta página esta dirigida a todo tipo de usuarios que desee conocer más acerca del "Universo de Rick y Morty"
+            se cuenta con tarjetas que muestran las características de cada personaje.</p>
+
+           <!-- <h1>Welcome to Rick and Morty Universe</h1>
+            <p class="description">La principal funcionalidad de esta app web, es poder introducir anuevos usuarios al mundo de Rick y Morty, llevandolos a conocer a los personajes a través de distintas categorías</p>-->
+           <center> <button value="inicio" style="cursor:pointer" id="next" class="btn-siguiente">Conoce más</button></center>
 
           </div>
       </div>
 
       <div id="displayTwo" style="display:none">
+        <header>
           <button id="hamburguer">
             <hr> 
             <hr>
@@ -26,11 +35,19 @@
           </button>
           <nav id="options-menu" class="disabled-menu">
             <ul> 
-              <li><a href="#">Filter</a></li>
+              <!--<li><a href="#">Filter</a></li>-->
+              <select class="select-style" id="select_filter">
+                <option value="">Filter</option>
+                <option class="select-o" value="Female" id="filGender">Female</option>
+                <option class="select-o" value="Male" id="filGenderM">Male</option>
+                <option class="select-o" value="Origin">Origin</option>
+              </select>          
+            </ul>
               <li><a href="#">Order</a></li>
               <li><a href="#">Opcion 3</a></li>
             </ul>
           </nav>
+        </header>
           <section id="area"></section>
           
       </div>
@@ -39,7 +56,7 @@
         <div class='define'>
             <p>Data Lovers 2021</p>
         </div>
-    </footer>
+      </footer>
 
   </body>
 </html>
