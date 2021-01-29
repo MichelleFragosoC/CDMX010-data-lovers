@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 60px 0 0 0;
+    background-image: url(img/inicio.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+ 
+#page {
+    margin: 0px auto;
+    width: 100%;
+}
+ 
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #36D8E5;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+h1{
+    font-family: 'Arial Narrow Bold', sans-serif; /*Tipo de letra*/
+    text-align: center;
+    font-size: 25px; /*Tamaño de la letra*/
+    font-weight: 300; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
+    color: black;
+  }
+  
+  h2{
+    font-family: 'Arial Narrow Bold', sans-serif; /*Tipo de letra*/
+    text-align: justify;
+    padding:10px;
+    margin-left: 18%;
+    margin-right: 18%;
+    font-size: 25px; /*Tamaño de la letra*/
+    font-weight: 400; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
+    color: black;
+  }
+
+/*Propiedades el botón de la primer pantalla*/
+  #displayOne{
+    padding:10px;
+    margin-top: 2%;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 3%;
+    background-color:#00b1dd;/*#a8eca5*/
+    border-radius: 8px;
+  }
+
+  img{
+    background-color:transparent; /* #ffdd90; Se asigna color de fondo a la imagen*/
+    background-repeat: no-repeat; /*Para que la imagen no se duplique en sí misma*/
+    background-attachment: fixed;
+    border:none;
+    display:block;
+    margin: auto;
+    width: 220px; /*ancho*/
+    height: 180px; /*largo o alto de la imagen*/
+  }
+
+.boton{
+    background-color: rgb(9, 216, 243); /*Fondo del botón*/
+    border-radius: 8px; /*se asigna un borde o quita las equinas del botón*/
+    margin: 10px;
+    border: 3px solid rgb(251, 255, 0); /*Para el borde del botón*/
+    font-size: 25px; /*Tamaño de la letra*/
+    font-weight: 400; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
+    color: white; /*Color de la letra*/
+    cursor: pointer;
+    cursor: hand; /*Tipo/estilo del cursor*/
+    text-align: center;
+    }
+
+
+#content {
+    height: 100%;
+    overflow: auto;
+    padding: 0% 1% 0% 1%;
+    width: 98%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #36D8E5; /*#333*/
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
