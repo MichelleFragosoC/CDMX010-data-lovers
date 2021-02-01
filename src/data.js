@@ -18,13 +18,76 @@ export const anotherExample = () => {
  // const printPersonajes = 
 //};
 
+// export function filterFemale(personajes, gender) {
 
-export const filterByType = (type) => {
-  const filteredPokemons = pokemons.filter(function(pokemon){
-    return type === pokemon.type
-  });
+//   const filterForFemale= personajes.filter(allData=> allData.gender===gender);
+  
+//   return filterForFemale;
+// };
 
-  return  filteredPokemons;
-}
+export function filterFemale(personajes, gender) {
+  
+  const filterForFemale= personajes.filter(allData=> allData.gender === gender);
+  return filterForFemale;
+};
 
-export default data;
+export function filterMale(personajes, gender) {
+
+  const filterForMale= personajes.filter(allData=> allData.gender === gender);
+  
+  return filterForMale;
+};
+
+export function filterUnknown(personajes, gender) {
+
+  const filterForUnkwon= personajes.filter(allData=> allData.gender===gender);
+  
+  return filterForUnkwon;
+};
+
+export function filterAlive(personajes, status) {
+
+  const filterForAlive= personajes.filter(allDat=> allDat.status === status);
+  
+  return filterForAlive;
+};
+
+export function filterDead(personajes, status) {
+
+  const filterForDead= personajes.filter(allDat=> allDat.status === status);
+  
+  return filterForDead;
+};
+
+export function filterSunknown(personajes, status) {
+
+  const filterUnknown= personajes.filter(allDat=> allDat.status === status);
+  
+  return filterUnknown;
+};
+
+export function orderAsc(personajes, name) {
+
+  const orderName = personajes.sort((a,b) => a.name.localeCompare(b.name));
+  return orderName;
+
+};
+
+export function orderDes(personajes, name) {
+
+  const orderName2 = personajes.sort((a,b) => b.name.localeCompare(a.name));
+  return orderName2;
+
+};
+
+//const orderName = personajes.sort((a,b) => a.name > b.name);
+
+// export const filterByType  (type) => {
+//   const filteredPokemons = pokemons.filter(function(pokemon){
+//     return type === pokemon.type
+//   });
+
+//   return  filteredPokemons;
+// }
+
+//export default data;

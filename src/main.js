@@ -1,4 +1,4 @@
-//import { rickandmorty } from './data.js';
+import {filterFemale, filterMale, filterUnknown, filterAlive, filterDead, filterSunknown, orderAsc, orderDes } from './data.js';
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
@@ -52,73 +52,56 @@ document.getElementById('next').addEventListener("click", function(){
 
         // **Función para el filtrado
 
-        const buttonFilter = document.getElementById("select_filter");
-        buttonFilter.addEventListener("change", function genderFiltered(){
-        let genderUser = document.getElementById("filGender").value;
-        console.log(genderUser);
+      //const buttonFilter = document.getElementById("select_filter");
+      //const genderUser = document.getElementById("filGender");
+      const female =document.getElementById("female");
+      const male =document.getElementById("male");
+      console.log(female.value);
+      console.log(male.value);
+
+      
+     // const usuario = genderUser.value;
+      //console.log(usuario);
+        //  female.addEventListener("", function(){
+        //      alert('hola');
+        //  });
+
+//         female.addEventListener("change", () => {
+
+//             console.log(filterForFemale);
+//     //         let filterGender = personajes.filter(f => f.gender === female.value)
+//         filterForFemale.forEach((element)=>{
+//                 return  `
+//                 <div class="card">
+//                     <img src="${element.image}"/> 
+//                     <div>
+//                         <h4> Name: ${element.name}</h4>
+//                         <p class="status"> Status: ${element.status}</p>
+//                         <p class="gender"> Gender: ${element.gender}</p>
+//                         <p class="origin"> Origin: ${element.origin.name}</p>
+//                         <p> Species: ${element.species}</p>
+//                         <p> Type: ${element.type}</p>
+//                     </div>
+//                 </div> 
+//                 `
+//             }).join(" ");
+//             document.getElementById("area").innerHTML = filterFemale;
+//   console.log(filterForFemale);
+
+//         });
+
+    // //     console.log(genderUser);
+    console.log(filterFemale(personajes, 'Female'));
+    console.log(filterMale(personajes, 'Male'));
+    console.log(filterUnknown(personajes, 'unknown'));
+    console.log(filterAlive(personajes, 'Alive'));
+    console.log(filterDead(personajes, 'Dead'));
+    console.log(filterSunknown(personajes, 'unknown'));
+    console.log(orderAsc(personajes, 'name'));
+    console.log(orderDes(personajes, 'name'));
+     });
 
     
-            let filterGender = personajes.filter(f => f.gender == genderUser)
-            let genderFiltered = filterGender.map((element)=>{
-
-                return  `
-                <div class="card">
-                    <img src="${element.image}"/> 
-                    <div>
-                        <h4> Name: ${element.name}</h4>
-                        <p class="status"> Status: ${element.status}</p>
-                        <p class="gender"> Gender: ${element.gender}</p>
-                        <p class="origin"> Origin: ${element.origin.name}</p>
-                        <p> Species: ${element.species}</p>
-                        <p> Type: ${element.type}</p>
-                    </div>
-                </div> 
-                `
-            }).join(" ");
-            document.getElementById("area").innerHTML = genderFiltered;
-        });
-
-       
-    });
-
-
-    // **Imprimir personajes con detalle por medio de fetch**
-
-    //const url = 'https://rickandmortyapi.com/api/character';
-    //const result = document.getElementById('area');
-
-        //fetch(url)
-        //.then(response => response.json()) // Then: Promesas a cumplir
-        //.then(data => {
-            
-          //  let personajes = data.results;
-            //console.log(personajes)
-            //imprimirData(personajes) //mandando llamar la función
-        //});
-
-          //  const imprimirData = (datos) =>{  //Parametro
-            //    datos.forEach((element) => { //Argumento
-              //      let tarjetas = `
-                //    <section class="card" id="cards">
-                  //  <div class="card">
-                    //<img src="${element.image}"/> 
-                    //<h2> ${element.name}</h2>
-                    //<p class="status"> ${element.status}</p>
-                    //<p class="gender"> ${element.gender}</p>
-                    //<p> ${element.species}</p>
-                    //<p> ${element.type}</p>
-                    //</div>
-                    //</section>
-                    //`;
-                    //result.insertAdjacentHTML("beforeend", tarjetas);
-                //});
-            //};
-
-
-    //});
-
-
-//console.log(example, data);
 
 
 
@@ -131,16 +114,6 @@ document.getElementById('next').addEventListener("click", function(){
 
 
 
-
-
-
-
-
-
-
-
-
-   
 
 
 

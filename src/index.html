@@ -16,19 +16,18 @@
       <div id="displayOne" class="displayOne">
           <div>
             <h1 class="typing"><strong>Welcome to Rick & Morty Universe</strong></h1>
-            <p class="description">Esta página esta dirigida a todo tipo de usuarios que desee conocer más acerca del "Universo de Rick y Morty"
-            se cuenta con tarjetas que muestran las características de cada personaje.</p>
+            <p class="description">On this website you will find information about all the characters in the Rick and Morty Universe</p>
 
            <!-- <h1>Welcome to Rick and Morty Universe</h1>
             <p class="description">La principal funcionalidad de esta app web, es poder introducir anuevos usuarios al mundo de Rick y Morty, llevandolos a conocer a los personajes a través de distintas categorías</p>-->
-           <center> <button value="inicio" style="cursor:pointer" id="next" class="btn-siguiente">Conoce más</button></center>
+           <center> <button value="inicio" style="cursor:pointer" id="next" class="btn-siguiente">Go!</button></center>
 
           </div>
       </div>
 
       <div id="displayTwo" style="display:none">
         <header>
-          <button id="hamburguer">
+          <button id="hamburguer" style="cursor:pointer">
             <hr> 
             <hr>
             <hr>
@@ -36,15 +35,21 @@
           <nav id="options-menu" class="disabled-menu">
             <ul> 
               <!--<li><a href="#">Filter</a></li>-->
-              <select class="select-style" id="select_filter">
-                <option value="">Filter</option>
-                <option class="select-o" value="Female" id="filGender">Female</option>
-                <option class="select-o" value="Male" id="filGenderM">Male</option>
-                <option class="select-o" value="Origin">Origin</option>
+              <select  name="gender" class="select-style" id="filGender">
+                <option value="">Gender</option>
+                <option name="female" value="female" id="female">Female</option>
+                <option  name="male" value="male" id="male">Male</option>
+                <option  name="unknown" value="unknown" id="unknown">Unknown</option>
+              </select>          
+              <select name="Status" class="select-style" id="select_status">
+                <option value="">Status</option>
+                <option name="alive" value="alive" id="alive">Alive</option>
+                <option name="dead" value="dead" id="dead" >Dead</option>
+                <option  name="sunknown" value="sunknown" id="sunknown">Unknown</option>
               </select>          
             </ul>
-              <li><a href="#">Order</a></li>
-              <li><a href="#">Opcion 3</a></li>
+              <!--<li><a href="#">Order</a></li>
+              <li><a href="#">Opcion 3</a></li>-->
             </ul>
           </nav>
         </header>

@@ -48,15 +48,13 @@ body{
 }*/
 
 .typing  {
-  font-family: 'Monaco';
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 300;
-  color: white;
   border-right: .15em solid transparent;
   white-space: nowrap;
   overflow: hidden;
-  width: 31em;
+  width: 26em;
   -webkit-animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
   animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
   -webkit-animation-fill-mode: forwards;
