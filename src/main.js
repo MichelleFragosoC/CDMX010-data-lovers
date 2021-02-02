@@ -1,11 +1,40 @@
-import {filterFemale, filterMale, filterUnknown, filterAlive, filterDead, filterSunknown, orderAsc, orderDes } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
+import {filterFemale, filterMale, filterUnknown, filterAlive, filterDead, filterSunknown, orderAsc } from './data.js';
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
 
- 
 let personajes = rickandmorty.results;
+let filGender= document.getElementById('filGender')
+let boton = document.getElementById('hamburguer');
+const female =document.getElementById("female");
+const male =document.getElementById("male");
 
+document.addEventListener('DOMContentLoaded',()=>{
+    filGender.addEventListener('change',(e)=>{
+        createCards(filterFemale(personajes,e.target.value ))
+        console.log("Estoy escuchando el", e.target.value)
+    })
+});
+
+console.log(filterFemale(personajes, 'Female'));
+
+const createCards = personajes => {
+    let showAll = personajes.map((element) =>{
+        return  `
+            <div class="card">
+                <img src="${element.image}"/> 
+                <div>
+                    <h4> Name: ${element.name}</h4>
+                    <p class="status"> Status: ${element.status}</p>
+                    <p class="gender"> Gender: ${element.gender}</p>
+                    <p class="origin"> Origin: ${element.origin.name}</p>
+                    <p> Species: ${element.species}</p>
+                    <p> Type: ${element.type}</p>
+                </div>
+            </div> 
+            `;
+        }).join(" ");
+        document.getElementById("area").innerHTML = showAll;
+}
+ 
 document.getElementById('next').addEventListener("click", function(){
     displayOne.style.display='none'; //ocultar
     displayTwo.style.display='block'; //mostrar
@@ -13,25 +42,9 @@ document.getElementById('next').addEventListener("click", function(){
 
     document.getElementById("next").addEventListener("click", function(){
 
-        let showAll = personajes.map((element) =>{
-            return  `
-                <div class="card">
-                    <img src="${element.image}"/> 
-                    <div>
-                        <h4> Name: ${element.name}</h4>
-                        <p class="status"> Status: ${element.status}</p>
-                        <p class="gender"> Gender: ${element.gender}</p>
-                        <p class="origin"> Origin: ${element.origin.name}</p>
-                        <p> Species: ${element.species}</p>
-                        <p> Type: ${element.type}</p>
-                    </div>
-                </div> 
-                `;
-            }).join(" ");
-            document.getElementById("area").innerHTML = showAll;
+       createCards(personajes);
 
         // **Función del menú hamburguesa**   
-        let boton = document.getElementById('hamburguer');
 
         function showMenu(){
              let menu = document.getElementById('options-menu');
@@ -54,10 +67,8 @@ document.getElementById('next').addEventListener("click", function(){
 
       //const buttonFilter = document.getElementById("select_filter");
       //const genderUser = document.getElementById("filGender");
-      const female =document.getElementById("female");
-      const male =document.getElementById("male");
-      console.log(female.value);
-      console.log(male.value);
+
+     
 
       
      // const usuario = genderUser.value;
@@ -66,31 +77,30 @@ document.getElementById('next').addEventListener("click", function(){
         //      alert('hola');
         //  });
 
-//         female.addEventListener("change", () => {
+        female.addEventListener("change", () => {
 
-//             console.log(filterForFemale);
-//     //         let filterGender = personajes.filter(f => f.gender === female.value)
-//         filterForFemale.forEach((element)=>{
-//                 return  `
-//                 <div class="card">
-//                     <img src="${element.image}"/> 
-//                     <div>
-//                         <h4> Name: ${element.name}</h4>
-//                         <p class="status"> Status: ${element.status}</p>
-//                         <p class="gender"> Gender: ${element.gender}</p>
-//                         <p class="origin"> Origin: ${element.origin.name}</p>
-//                         <p> Species: ${element.species}</p>
-//                         <p> Type: ${element.type}</p>
-//                     </div>
-//                 </div> 
-//                 `
-//             }).join(" ");
-//             document.getElementById("area").innerHTML = filterFemale;
-//   console.log(filterForFemale);
+    //         let filterGender = personajes.filter(f => f.gender === female.value)
+        filterForFemale.map((element)=>{
+                return  `
+                <div class="card">
+                    <img src="${element.image}"/> 
+                    <div>
+                        <h4> Name: ${element.name}</h4>
+                        <p class="status"> Status: ${element.status}</p>
+                        <p class="gender"> Gender: ${element.gender}</p>
+                        <p class="origin"> Origin: ${element.origin.name}</p>
+                        <p> Species: ${element.species}</p>
+                        <p> Type: ${element.type}</p>
+                    </div>
+                </div> 
+                `
+            }).join(" ");
+            document.getElementById("area").innerHTML = filterFemale;
 
-//         });
+        });
 
     // //     console.log(genderUser);
+    /*
     console.log(filterFemale(personajes, 'Female'));
     console.log(filterMale(personajes, 'Male'));
     console.log(filterUnknown(personajes, 'unknown'));
@@ -98,7 +108,8 @@ document.getElementById('next').addEventListener("click", function(){
     console.log(filterDead(personajes, 'Dead'));
     console.log(filterSunknown(personajes, 'unknown'));
     console.log(orderAsc(personajes, 'name'));
-    console.log(orderDes(personajes, 'name'));
+    */
+   // console.log(orderDes(personajes, 'name'));
      });
 
     
