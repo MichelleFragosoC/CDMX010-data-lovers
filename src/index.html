@@ -8,8 +8,18 @@
   <body>
 
     <div id="page">
-      <div id="header">Rick and Morty Universe</div>
-      <div id="content"> 
+      <!--<div id="header">Rick and Morty Universe</div>
+      <div id="content"> -->
+        
+      <div id="displayOne" >
+        <div>
+          <img src="img/Logo.png">
+          <!--<h1>Rick y Morty :D</h1>-->
+          <h2>La principal funcionalidad de esta app web, es poder introducir a nuevos 
+            usuarios al mundo de Rick y Morty, llevándolos a conocer a los personajes a través de distintas categorías.</h2>
+          <center><button type="submit" id="next" class="boton">COMENZAR</button></center> 
+        </div>
+      </div>
           
       </div>
   </div>
@@ -17,24 +27,55 @@
     <div id="root"></div>
     <script src="main.js" type="module"></script>
 
-      <div id="displayOne" >
-          <div>
-            <img src="img/Logo.png">
-            <!--<h1>Rick y Morty :D</h1>-->
-            <h2>La principal funcionalidad de esta app web, es poder introducir a nuevos 
-              usuarios al mundo de Rick y Morty, llevándolos a conocer a los personajes a través de distintas categorías.</h2>
-            <center><button type="submit" id="next" class="boton">COMENZAR</button></center> 
-          </div>
-      </div>
 
       <div id="displayTwo" style="display:none">
+        <header>
+          <div class="ancho">
+              <div claas="logo">
+                  <p><a href="index.html">RICK & MORTY</a></p>
+              </div>
+              <nav>
+                  <ul>
+                      <li><a href="#">FILTER</a></li>
+                      <li><a href='#'>Name</a></li>
+                      <li><a href='#'>Gener</a></li>
+                      <li><a href='#'>Origin</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </header>
+
+
+        <!--<nav id='menu'>
+    <div class='barra'>
+        <input type='checkbox'/>
+            <label><i aria-hidden='true' class='fa fa-bars'/></label>
+            <ul class='principal'>
+            <li><a href='/'>Inicio</a></li>
+            <li><a href='#'>Sobre mi</a></li>
+            <li><a href='#'>Filtrar<i class="fa fa-chevron-down"></i></a>
+                <ul class='menus'>
+                <li><a href='#'>Categoría 1</a></li>
+                <li><a href='#'>Categoría 2</a></li>
+                <li><a href='#'>Categoría 3</a></li>
+                </ul>
+              </li>
+            <li><a href='#'>Contacto</a></li>
+            </ul>
+        <div class='iconos'>
+            <a href='#'><i aria-hidden='true' class='fa fa-twitter'/></a>
+            <a href='#'><i aria-hidden='true' class='fa fa-facebook'/></a>
+            <a href='#'><i aria-hidden='true' class='fa fa-instagram'/></a>
+            <a href='#'><i aria-hidden='true' class='fa fa-pinterest-p'/></a>
+          </div>
+    </div>
+</nav>-->
           <h2>Personajes</h2>
           <div id="area"></div>
       </div>
 
 
-      <div id="footer">Data Lovers 2021 By: Jess&Mich</div>
-
       </div>
   </body>
+  <!--<div id="footer">Data Lovers 2021 By: Jess&Mich <br> Equipo Dinámita</div>-->
 </html>
