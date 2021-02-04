@@ -11,26 +11,108 @@ body{
 }
 
 #displayOne{
-  /*display: flex;*/
   width: 100%; /*ancho*/
   height: 100vh;
   display: inline-block;
-  /*background: linear-gradient(to right, #005C98, #505BDA);*/
-  /*background-image: url("inicio.jpg");*/
   background-size: 100%;
-  background-repeat: repeat;
   background-attachment: fixed;
-  animation-name: anim;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  background-size: cover;
+  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
+  background-attachment: fixed, scroll;
 }
 
-@keyframes anim{
-  0% {background-color: #00132d;} 
- 25% {background-color: #00193b;} 
- 50% {background-color: #001e45;} 
- 75% {background-color: #002657;} 
-100% {background-color: #002d67;} 
+.stars{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%; 
+  display:block;
+  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
+  z-index:-2;
+  -moz-animation:move-twink-back 100s linear infinite;
+  -ms-animation:move-twink-back 100s linear infinite;
+  -o-animation:move-twink-back 100s linear infinite;
+  -webkit-animation:move-twink-back 100s linear infinite;
+  animation:move-twink-back 100s linear infinite;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+
+.typing  {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 300;
+  border-right: .15em solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 18em;
+  text-align: center;
+  padding: 250px 0 150px 0px;
+  -webkit-animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  font-family: 'Creepster';
+  color: #16ACC9;
+  text-shadow: 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B;
+  -webkit-text-stroke: 1px #0E3D46;
+}
+
+@keyframes type {
+0% {
+  width: 0;
+}
+1% {
+  opacity: 1;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@-webkit-keyframes type {
+0% {
+  width: 0;
+}
+1% {
+  opacity: 1;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@keyframes blink {
+50% {
+  border-color: transparent;
+}
+}
+@-webkit-keyframes blink {
+50% {
+  border-color: transparent;
+}
 }
 
 /*.typing{
@@ -262,9 +344,12 @@ text-decoration: none;
 }*/
 
 header{
-  height: 50px;
-  background-color: aqua;
-}
+    width: 100%;
+    background:#E1EB0D; /*   #1ABC9C*/
+    height: 70px;
+    position:fixed;
+    top:0;
+  }
 
 
 header #hamburguer{
@@ -303,15 +388,16 @@ a:hover{
   display: none;
 }
 
-
 #area{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 10vh;
 }
 
 .card img{
   width: 80%;
+  border: 5px solid black;
 }
 
 .card{
@@ -321,7 +407,7 @@ a:hover{
   padding: 25px 25px 25px 25px;
   text-align: center;
   box-shadow: 1px 1px 11px 0px #00000030;
-  background-color: purple;
+  background-color: rgba(73, 248, 11, 0.87);
   width: 326px;
   border-radius: 16px;
   overflow: hidden;
@@ -331,6 +417,12 @@ a:hover{
 h4{
   font-size: 14px;
   color: black;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+p{
+  font-weight: bold;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 
