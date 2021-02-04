@@ -100,13 +100,6 @@ body{
 }
 }
 
-/*h1{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 300;
-  color: white;
-}*/
 
 .description{
   text-align: center;
@@ -120,17 +113,6 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/*h3{
-  text-align:center;
-  padding:10px;
-  margin-left:18%;
-  margin-right: 18%;
-  margin-top:2%;
-  margin-bottom:2%;
-  font-size: 25px;
-  font-weight:400;
-  color:white;
-}*/
 
 #displayTwo{
   /*display: flex;*/
@@ -143,9 +125,44 @@ body{
  /* background-repeat: no-repeat;*/
   /*background: cover;*/
   background-attachment: fixed;
+  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
 }
 
+.estrellas{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
+  z-index:-2;
 
+  -moz-animation:move-twink-back 100s linear infinite;
+  -ms-animation:move-twink-back 100s linear infinite;
+  -o-animation:move-twink-back 100s linear infinite;
+  -webkit-animation:move-twink-back 100s linear infinite;
+  animation:move-twink-back 100s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
 
 /*.description{
   text-align: justify;

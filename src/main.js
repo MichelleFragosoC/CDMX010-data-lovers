@@ -2,22 +2,44 @@ import {filterFemale, filterMale, filterUnknown, filterAlive, filterDead, filter
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
 
 let personajes = rickandmorty.results;
-let filGender= document.getElementById('filGender')
+let filGender= document.getElementById('filGender');
+let filStatus= document.getElementById('filStatus');
 let boton = document.getElementById('hamburguer');
-const female =document.getElementById("female");
-const male =document.getElementById("male");
+let buttonAll = document.getElementById('showAll');
+let orderA = document.getElementById('order');
 
+//**Impresión de Género**
 document.addEventListener('DOMContentLoaded',()=>{
     filGender.addEventListener('change',(e)=>{
-        createCards(filterFemale(personajes,e.target.value ))
+        createCards(filterFemale(personajes,e.target.value ));
+        createCards(filterMale(personajes,e.target.value ));
+        createCards(filterUnknown(personajes,e.target.value ));
         console.log("Estoy escuchando el", e.target.value)
     })
 });
 
+//**Impresión de Filtro de Estado**
+document.addEventListener('DOMContentLoaded',()=>{
+    filStatus.addEventListener('change',(e)=>{
+        createCards(filterAlive(personajes,e.target.value ));
+        createCards(filterDead(personajes,e.target.value ));
+        createCards(filterSunknown(personajes,e.target.value ));
+        console.log("Estoy escuchando el", e.target.value)
+    })
+});
 console.log(filterFemale(personajes, 'Female'));
 
-const createCards = personajes => {
-    let showAll = personajes.map((element) =>{
+//**Impresión de ordenamiento**
+document.addEventListener("DOMContentLoaded",()=>{
+    orderA.addEventListener('click', (e)=>{
+        createCards(orderAsc(personajes,e.target.value ));
+        console.log("Estoy escuchando el Ordenamiento", e.target.value)
+    })
+});
+
+//**Tarjetas**
+const createCards = data => {
+    let showAll = data.map((element) =>{
         return  `
             <div class="card">
                 <img src="${element.image}"/> 
@@ -35,14 +57,15 @@ const createCards = personajes => {
         document.getElementById("area").innerHTML = showAll;
 }
  
-document.getElementById('next').addEventListener("click", function(){
-    displayOne.style.display='none'; //ocultar
-    displayTwo.style.display='block'; //mostrar
-});
+        document.getElementById('next').addEventListener("click", function(){
+            displayOne.style.display = 'none'; //Ocultar
+            displayTwo.style.display = 'block'; //Mostrar
+        
+            createCards(personajes);
 
-    document.getElementById("next").addEventListener("click", function(){
-
-       createCards(personajes);
+            buttonAll.addEventListener("click", ()=>{
+                createCards(personajes);
+            })
 
         // **Función del menú hamburguesa**   
 
@@ -62,42 +85,6 @@ document.getElementById('next').addEventListener("click", function(){
 
         boton.addEventListener("click", showMenu);
 
-
-        // **Función para el filtrado
-
-      //const buttonFilter = document.getElementById("select_filter");
-      //const genderUser = document.getElementById("filGender");
-
-     
-
-      
-     // const usuario = genderUser.value;
-      //console.log(usuario);
-        //  female.addEventListener("", function(){
-        //      alert('hola');
-        //  });
-
-        female.addEventListener("change", () => {
-
-    //         let filterGender = personajes.filter(f => f.gender === female.value)
-        filterForFemale.map((element)=>{
-                return  `
-                <div class="card">
-                    <img src="${element.image}"/> 
-                    <div>
-                        <h4> Name: ${element.name}</h4>
-                        <p class="status"> Status: ${element.status}</p>
-                        <p class="gender"> Gender: ${element.gender}</p>
-                        <p class="origin"> Origin: ${element.origin.name}</p>
-                        <p> Species: ${element.species}</p>
-                        <p> Type: ${element.type}</p>
-                    </div>
-                </div> 
-                `
-            }).join(" ");
-            document.getElementById("area").innerHTML = filterFemale;
-
-        });
 
     // //     console.log(genderUser);
     /*
