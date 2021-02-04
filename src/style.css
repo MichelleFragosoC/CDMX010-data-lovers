@@ -104,8 +104,10 @@ h1{
 
 header{
     width: 100%;
-    background: #1ABC9C;
+    background:#E1EB0D; /*   #1ABC9C*/
     height: 70px;
+    position:fixed;
+    top:0;
   }
 
   .ancho{
