@@ -1,20 +1,20 @@
 //import { example } from './data.js';
-import data from './data/rickandmorty/rickandmorty.js';
+//import data from './data/rickandmorty/rickandmorty.js';
 //Importando funciones de data.js
-import { filterSpecies } from './data.js'; 
-let rickandmorty = data.results;
-console.log(rickandmorty);
+//import {filterFemale, filterMale, filterUnknown} from './data.js'; 
 
+import {filterFemale, filterMale, filterUnknown, filterAlive, filterDead, filterSunknown, orderAsc } from './data.js';
+import rickandmorty from './data/rickandmorty/rickandmorty.js';
 
+//------DECLARACIÓN DE VARIABLES---------------
+let personajes = rickandmorty.results;
+let filGender= document.getElementById('filGender');
+let filStatus= document.getElementById('filStatus');
+let orderA = document.getElementById('order');
 
-document.getElementById('next').addEventListener("click", function(){
-    displayOne.style.display='none'; //ocultar
-    displayTwo.style.display='block'; //mostrar
-});
-
-const showList = personajes => {
-    const listChar = document.getElementById("area");
-    let showAll = personajes.map((element) =>{
+//**Tarjetas**
+const createCards = data => {
+    let showAll = data.map((element) =>{
         return  `
             <div class="card">
                 <img src="${element.image}"/> 
@@ -31,31 +31,66 @@ const showList = personajes => {
         }).join(" ");
         document.getElementById("area").innerHTML = showAll;
 }
+console.log(createCards)
 
-//------------------------------------------------------------------//
-//document.getElementById('next').addEventListener("click", function(){
-//    displayOne.style.display='none'; //ocultar
-//    displayTwo.style.display='block'; //mostrar
-//})
+//**Impresión de Género**
+document.addEventListener('DOMContentLoaded',()=>{
+    filGender.addEventListener('change',(e)=>{
+        createCards(filterFemale(personajes,e.target.value ));
+        createCards(filterMale(personajes,e.target.value ));
+        createCards(filterUnknown(personajes,e.target.value ));
+        console.log("Estoy escuchando la impresión de género", e.target.value)
+    })
+});
 
-//const url = 'https://rickandmortyapi.com/api/character/23';
-//const result = document.getElementById('area');
+//**Impresión de Filtro de Estado**
+document.addEventListener('DOMContentLoaded',()=>{
+    filStatus.addEventListener('change',(e)=>{
+        createCards(filterAlive(personajes,e.target.value ));
+        createCards(filterDead(personajes,e.target.value ));
+        createCards(filterSunknown(personajes,e.target.value ));
+        console.log("Estoy escuchando el", e.target.value)
+    })
+});
+console.log(filterFemale(personajes, 'Female'));
 
-//    document.getElementById("next").addEventListener("click", function(){
-//        fetch(url)
-//        .then(response => response.json()) // Then: Promesas a cumplir
-//        .then(data => {
-                  
-//            result.innerHTML = `<p> ${data.name}</p>
-//                                <p> ${data.status}</p>
-//                                <p> ${data.gender}</p>
-//                              <p> ${data.origin}</p>
-//                                <p> ${data.episode}</p>
-//                                <p> ${data.species}</p>
- //                               <p> ${data.type}</p>
-//                                <p> ${data.location}</p>
-//                                <img src="${data.image}"/>`
-//            console.log(data)
-//        });
-//   });
+//**Impresión de ordenamiento**
+document.addEventListener("DOMContentLoaded",()=>{
+    orderA.addEventListener('click', (e)=>{
+        createCards(orderAsc(personajes,e.target.value ));
+        console.log("Estoy escuchando el Ordenamiento", e.target.value)
+    })
+});
 
+
+//Función para el botón de la primer pantalla
+// document.getElementById('next').addEventListener("click", function(){
+//    page-one.style.display = 'none'; //Ocultar
+//    page-two.style.display = 'block'; //Mostrar
+//});
+//document.getElementById("next").addEventListener("click", function(){
+//    document.getElementById("page-one").style.display = "none"; //ocultar
+//    document.getElementById("page-two").style.display = "block"; //mostrar
+//});
+
+
+
+
+//**Impresión de Género**
+//document.addEventListener('DOMContentLoaded',()=>{
+//    filterByGender.addEventListener('change',(e)=>{
+//        createCards(filterFemale(personajes,e.target.value ));
+//        createCards(filterMale(personajes,e.target.value ));
+//        createCards(filterUnknown(personajes,e.target.value ));
+//        console.log("Estoy escuchando el", e.target.value)
+//    })
+//});
+
+//---- -------------PRINT SORT ASC-----------------------------
+// document.addEventListener("DOMContentLoaded",()=>{
+//    sortAZ.addEventListener('click', (e)=>{
+//        createCards(sortAsc(personajes,e.target.value ));
+//        console.log("Estoy escuchando el Ordenamiento", e.target.value)
+//    })
+//});
+//---- -------------PRINT SORT DESC-----------------------------

@@ -8,19 +8,79 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-//Filtrado por especie
-export const filterSpecies = (rickandmorty, value) => {
-  const array = [];
+//-------------FILTER BY GENDER--------------
+export function filterFemale(personajes, gender) { 
+  const filterForFemale= personajes.filter(element=> element.gender === gender);
+  return filterForFemale;
+}
 
-  rickandmorty.forEach((object) => {
-    object.species.forEach((select_species) => {
-      if (select_species === value) {
-        array.push(object);
-      }
-    });
-  });
-  return array;
-};
+export function filterMale(personajes, gender) {
+  const filterForMale= personajes.filter(element=> element.gender === gender);
+  return filterForMale;
+}
+
+export function filterUnknown(personajes, gender) {
+  const filterForUnkwon= personajes.filter(element=> element.gender===gender); 
+  return filterForUnkwon;
+}
+
+export function filterAlive(personajes, status) {
+  const filterForAlive= personajes.filter(element=> element.status === status);
+  return filterForAlive;
+}
+
+export function filterDead(personajes, status) {
+  const filterForDead= personajes.filter(element=> element.status === status);  
+  return filterForDead;
+}
+
+export function filterSunknown(personajes, status) {
+  const filterUnknown= personajes.filter(element=> element.status === status);
+  return filterUnknown;
+}
+
+export function orderAsc(personajes, name) {
+  const orderName = personajes.sort((a,b) => a.name.localeCompare(b.name));
+  return orderName;
+
+}
+
+//--------------SORT ASC ---------------------
+//export const sortAsc (personajes, name) => {
+//  const sortName = personajes.sort((a,b) => a.name.localeCompare(b.name));
+//  return sortName;
+//};
 
 
-//------------------------------------------------
+//-------------SORT DESC------------------------------
+//export const sortDesc (personajes, name) => {
+//  return 
+//};
+
+/* export const sortData (data, name) => {
+  const sortAsc = data;
+  if (sortAsc === "az") {
+    data.sort (function (a,b){
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    })
+  }
+  return sortAsc;
+}
+  const sortDesc = data;
+  if (sortDesc === "za") {
+
+    data.sort(function (a, b) {
+    if (b.name < a.name) {
+      return -1;
+    }
+    if (b.name > a.name) {
+      return 1;
+    }
+  })
+  return sortDesc;
+}; */

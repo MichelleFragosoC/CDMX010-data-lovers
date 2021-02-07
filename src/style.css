@@ -30,7 +30,7 @@ padding-left: 0px;
   left:0;
   right:0;
   bottom:0;
-  width:100%; /*ancho*/
+  width:100%;
   height:100%; 
   display:block;
   background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
@@ -359,6 +359,43 @@ top: -1px;
 /* #menu .iconos .fa:hover{
 color: #999;/*color del icono social al pasar el ratón
 } */
+h1{
+  font-size: 20px;
+  color: white;
+  font-family: 'Yusei Magic', sans-serif;
+}
+/*-------------CARDS----------------------*/
+#area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10vh;
+}
+
+.card img{
+  width: 80%;
+  border: 5px solid black;
+}
+
+.card{
+  width: 40%;
+  margin: 30px 30px 30px 30px;
+  background: #fff;
+  padding: 25px 25px 25px 25px;
+  text-align: center;
+  box-shadow: 1px 1px 11px 0px #00000030;
+  background-color: rgba(73, 248, 11, 0.87);
+  width: 326px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h4{
+  font-size: 14px;
+  color: black;
+  font-family: 'Yusei Magic', sans-serif;
+}
 
 #footer {
   position: fixed;
@@ -418,6 +455,10 @@ color: #999;/*color del icono social al pasar el ratón
 }
 #footer .iconos .fa:hover{
   color: #999;/*color del icono social al pasar el ratón*/
+}
+#footer .p {
+  font-weight: bold;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 /*-------------------RESPONSIVE--------------------------*/
