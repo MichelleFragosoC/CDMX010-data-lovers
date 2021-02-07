@@ -67,7 +67,7 @@ body{
   border-right: .15em solid transparent;
   white-space: nowrap;
   overflow: hidden;
-  width: 18em;
+  width: 15em;
   text-align: center;
   padding: 250px 0 150px 0px;
   -webkit-animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
@@ -183,7 +183,7 @@ body{
 }
 
 
-.description{
+.description{ /*este ya no esta haciendo nada*/
   text-align: center;
   padding: 80px;
   /*margin-left:18%;
@@ -287,7 +287,7 @@ footer {
  El contenido queda centrado y limitado, pero la cabecera y el pie
  llegan hasta los limites del navegador.
 */
-.define {
+.define {  /*Descripci+on de footer*/
   width:960px;
   margin:0 auto;
 }
