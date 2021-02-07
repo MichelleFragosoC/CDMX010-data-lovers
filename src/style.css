@@ -1,158 +1,479 @@
-/*body {
-    margin: 0;
-    padding: 60px 0 0 0;
-    background-image: url(img/inicio.png);
-    background-repeat: repeat;
-    background-attachment: fixed;
+*{  /*Para todo el documento*/
+  margin:0;
+  padding: 0;
 }
- 
-#page {
-    margin: 0px auto;
-    width: 100%;
+
+/*----------------------------------------------- */
+body {
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0px;
+padding-right: 0px;
+padding-left: 0px;
 }
- 
-#header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #36D8E5;
-    font-size: 20px;
-    text-align: center;
-    color: black;
-}*/
-h1{
-    font-family: 'Arial Narrow Bold', sans-serif; /*Tipo de letra*/
-    text-align: center;
-    font-size: 25px; /*Tamaño de la letra*/
-    font-weight: 300; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
-    color: black;
-  }
-  
-  h2{
-    font-family: 'Arial Narrow Bold', sans-serif; /*Tipo de letra*/
-    text-align: justify;
-    padding:10px;
-    margin-left: 18%;
-    margin-right: 18%;
-    font-size: 25px; /*Tamaño de la letra*/
-    font-weight: 400; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
-    color: black;
-  }
+/*----------------page-one-------------------------*/
 
-/*Propiedades el botón de la primer pantalla*/
-/*  #displayOne{
-    padding:10px;
-    margin-top: 2%;
-    margin-left: 12%;
-    margin-right: 12%;
-    margin-bottom: 3%;
-    background-color:#00b1dd;/*#a8eca5*/
- /*   border-radius: 8px;
-  }*/
+#page-one{
+  width: 100%; /*ancho*/
+  height: 100vh;
+  display: inline-block;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
+  background-attachment: fixed, scroll;
+}
 
-  img{
-    background-color:transparent; /* #ffdd90; Se asigna color de fondo a la imagen*/
-    background-repeat: no-repeat; /*Para que la imagen no se duplique en sí misma*/
-    background-attachment: fixed;
-    border:none;
-    display:block;
-    margin: auto;
-    width: 220px; /*ancho*/
-    height: 180px; /*largo o alto de la imagen*/
-  }
+.stars{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%; /*ancho*/
+  height:100%; 
+  display:block;
+  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
+  z-index:-2;
+  -moz-animation:move-twink-back 100s linear infinite;
+  -ms-animation:move-twink-back 100s linear infinite;
+  -o-animation:move-twink-back 100s linear infinite;
+  -webkit-animation:move-twink-back 100s linear infinite;
+  animation:move-twink-back 100s linear infinite;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
 
-.boton{
-    background-color: rgb(9, 216, 243); /*Fondo del botón*/
-    border-radius: 8px; /*se asigna un borde o quita las equinas del botón*/
-    margin: 10px;
-    border: 3px solid rgb(251, 255, 0); /*Para el borde del botón*/
-    font-size: 25px; /*Tamaño de la letra*/
-    font-weight: 400; /*GROSOR DE LA LETRA VA DE 100 - 900 O BOLD, BOLDER, LIGHT*/
-    color: white; /*Color de la letra*/
-    cursor: pointer;
-    cursor: hand; /*Tipo/estilo del cursor*/
-    text-align: center;
-    }
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+.typing  {  /*Titulo de pantalla*/
+  text-align: center;
+  font-size: 100px;
+  font-weight: 300;
+  border-right: .15em solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 15em;
+  text-align: center;
+  padding: 250px 0 150px 0px;
+  -webkit-animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  font-family: 'Creepster';
+  color: #16ACC9;
+  text-shadow: 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B;
+  -webkit-text-stroke: 1px #0E3D46;
+}
+
+@keyframes type {
+0% {
+  width: 0;
+}
+1% {
+  opacity: 1;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@-webkit-keyframes type {
+0% {
+  width: 0;
+}
+1% {
+  opacity: 1;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@keyframes blink {
+50% {
+  border-color: transparent;
+}
+}
+@-webkit-keyframes blink {
+50% {
+  border-color: transparent;
+}
+}
+
+.typing  {  /*ESTE TYPING ME PARECE QUE ES EL QUE DESAJUSTA LA PANTALLA*/
+  text-align: center;
+  font-size: 70px;
+  font-weight: 300;
+  border-right: .15em solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 26em;
+  -webkit-animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  font-family: 'Creepster';
+  color: #16ACC9;
+  text-shadow: 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B;
+  -webkit-text-stroke: 1px #0E3D46;
+}
+
+@keyframes type {
+0% {
+  width: 0;
+}
+1% {
+  opacity: 1;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@-webkit-keyframes type {
+0% {
+  width: 0;
+}
+1% {
+  opacity: 1;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@keyframes blink {
+50% {
+  border-color: transparent;
+}
+}
+@-webkit-keyframes blink {
+50% {
+  border-color: transparent;
+}
+}
+/*---------------Pa---------------*/
 
 
-/*#content {
-    height: 100%;
-    overflow: auto;
-    padding: 0% 1% 0% 1%;
-    width: 98%;
-}*/
+/*----------------page-two-------------*/
+#page-two{
+  width: 100%; /*ancho*/
+  height: 100vh;
+  display: inline-block;
+  background-color: white; 
+  background-size: 100%;
+  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
+}
 
-/*#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #36D8E5; /*#333*/
-/*    font-size: 20px;
-    text-align: center;
-    color: black;
-}*/
+.stars-two{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
+  z-index:-2;
 
-/*Creación de menú responsive*/
+  -moz-animation:move-twink-back 100s linear infinite;
+  -ms-animation:move-twink-back 100s linear infinite;
+  -o-animation:move-twink-back 100s linear infinite;
+  -webkit-animation:move-twink-back 100s linear infinite;
+  animation:move-twink-back 100s linear infinite;
+}
 
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+/* Para el boton de siguiente */
 
-  *{
-    margin:0;
-    padding:0;
-  }
+/*---------------For menu-----------------------*/
+#header{
+  width:100%; /*ancho*/
+  height: 50px;
+  background: #E1EB0D;
+  box-sizing: border-box; /*para que no se agrande el contenedor*/
+}
+.barra{
+  width:950px;/*ancho*/
+  margin:0 auto;
+}
 
+#menu{
+  background: #E1EB0D;
+  /*background: #F1F1F1;/* color de la barra*/
+  color: #333;/*color de las tres barritas*/
+  height: 50px; /*alto*/
+  width: 125vh; /*ancho*/
+  /*width:100%; /*ancho*/
+  float: left;
+  box-sizing: border-box; /*para que no se agrande el contenedor*/
+  border-bottom: 1px solid rgba(0,0,0,.05);/* borde inferior de la barra*/
+position:fixed; 
+z-index:101; 
+}
+
+#menu ul, #menu li{
+  margin: 0px auto;
+  padding:0 0;
+  list-style:none;
+}
+/* #menu .iconos{
+float:right;
+} */
+#menu li{ /*Opciones gijas en el menú*/
+  float:left;  /*Colocación de los bloques con las opciones*/
+  display:inline;
+  background: #E1EB0D;/* #e7f125; /*Para el color de las sub-categorías*/
+  position:relative;
+  font: 14px Arial, sans-serif;/*tamaño y fuente del texto */
+  font-weight: bold; /*Letras en negrita*/
+}
+
+#menu ul a{
+  display: block;
+  line-height: 50px;  /*Centrar el texto*/
+padding: 0 14px;
+  color: #333;/*color del texto*/
+  text-transform: uppercase;/*letras mayúsculas*/
+  letter-spacing: 3.5px;/*espacio entre letras*/
+  text-decoration: none; /*Quita el subrayado*/
+}
+#menu li a:hover{
+  color: #999;/*color del texto al pasar el ratón*/
+  text-decoration: none;
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+}
+
+#menu input{  /*Se refiere al estilo del checkbox*/
+  display:none;
+  margin:0 0; 
+  padding:0 0;
+  width:50px; /*ancho*/
+  height:50px;
+  opacity:0;
+  cursor:pointer;
+}
+
+#menu label{ /* contenedor de menu hamburguesa*/
+  display:none;
+  width: 50px; /*ancho*/
+  height: 50px;
+  line-height: 50px;/*para centrar el icono de menu */
+  text-align: center;
+  font-size: 17px;
+  vertical-align: middle;
+}
+
+#menu ul.menus{
+  height: auto;
+overflow: hidden;
+width: 170px; /*ancho*/
+background: #F1F1F1;/*color del fondo del submenu*/
+position: absolute;
+z-index: 99;
+display: none;
+border: 1px solid rgba(0,0,0,.05);
+}
+#menu ul.menus li{
+  display: block; /*Se ven visibles las opciones del menú*/
+  width: 100%; /*ancho*/
+  font: 12px  Arial, sans-serif;/*tamaño y fuente del  texto del submenu*/
+  text-transform: uppercase; /*Trasnforma las minúsculas*/
+border-bottom: 1px solid #E9E9E9;
+}
+#menu ul.menus li:last-child{
+border-bottom:none;
+}
+#menu ul.menus a{
+  color: #333;/*color del  texto del submenu*/
+line-height: 35px;
+}
+#menu li:hover ul.menus{
+display:block;
+}
+#menu ul.menus a:hover{
+  color: #999;/*color del  texto del submenu al pasar el ratón*/
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+}
+/* .iconos a{
+padding: 0 10px;
+height: 50px;
+display: inline-block;
+} */
+/* #menu .iconos .fa{
+font-size:14px;
+line-height: 50px;
+color: #333;/*color del icono social*/
+/*-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+} */
+#menu ul .fa{
+  font-size: 8px; /*Tamaño de la letra*/
+position: relative;
+top: -1px;
+}
+/* #menu .iconos .fa:hover{
+color: #999;/*color del icono social al pasar el ratón
+} */
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; /*ancho*/
+  height: 50px;
+  padding-bottom: 16px;
+  background: #111;
+  background: rgba(0,0,0,.90);
+  border-top: 2px solid #f00;
+  z-index:2000;
+
+  text-align: center;
+  color: white;
+}
+#footer .p{
+  font-size:14px;
+  font-size: large;
+  color: white;
+  position: fixed;
+  text-align: center;
+}
+/* #footer {
+  background: yellow;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  background: red;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+} */
+#footer .iconos{
+  float:right;
+}
+.iconos a{
+  padding: 0 10px;
+  height: 50px;
+  display: inline-block;
+}
+#footer .iconos .fa{
+  font-size:30px; /*Tamaño de los iconos*/
+  line-height: 50px;
+  color: #333;/*color del icono social*/
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+#footer .iconos .fa:hover{
+  color: #999;/*color del icono social al pasar el ratón*/
+}
+
+/*-------------------RESPONSIVE--------------------------*/
+
+@media screen and (max-width: 768px){ 
+#menu{
+  position:fixed; 
+  z-index:101; 
+}
+#menu ul{
+  background:#F1F1F1;/*color del desplegable del menu movil*/
+  position:absolute;
+  top:100%;
+  right:0;
+  left:0;
+  z-index:3;
+  height:auto;
+  display:none
+}
+#menu ul.menus{
+  width:100%;
+  position:static;
+  padding-left:20px
+}
+#menu li{
+  display:block;
+  float:none;
+  width:auto;
+  font: 11px  Arial, sans-serif;
+}
+#menu ul a{
+  display: block; 
+  line-height: 40px;
+  padding: 0 14px;/*tamaño y fuente del  menu movil*/
+}
+#menu input,#menu label{
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+}
+#menu input{
+  z-index:4
+}
+#menu input:checked + label{
+  color:#333;/*color de las tres barritas una vez se clica*/
+}
+#menu input:checked ~ ul{
+  display:block;
+  top:50px;
+}
+.barra{
+  width:95%!important;
+}
+}
 header{
-    width: 100%;
-    background:#E1EB0D; /*   #1ABC9C*/
-    height: 70px;
-    position:fixed;
-    top:0;
-  }
-
-  .ancho{
-    width: 80%;
-    height:70px;
-    /*background: red;*/
-    margin: auto;
-  }
-  .logo {
-    width: 30%;
-    height:70px;
-    /*background: blue;*/
-    float: left;
-    padding-top: 10px;
-    box-sizing: border-box; /*para que no se agrande el contenedor*/
-  }
-
-  .logo p a {
-    color: #fff;
-    font-size: 40px;
-    text-decoration: none;
-    font-weight: bold; /*Letras en negrita*/
-    position: fixed;
-  }
-  nav {
-    width: 70%;
-    height: 70px;
-/* background: olive;*/
-    float: left;
-    text-align: right;
-    padding-top: 24px;
-    box-sizing: border-box; /*para que no se agrande el contenedor*/
-  }
-  nav ul li {
-    display: inline;
-  }
-  nav ul li a {
-    color: #fff;
-    font-size: 13px;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-left: 15px;
-    font-weight: bold; /*Letras en negrita*/
-    letter-spacing: 1px;
-  }
-  nav ul li a:hover {
-    color: #444;
-  }
+  padding-top:50px;
+}
+/*fin menu responsive*/

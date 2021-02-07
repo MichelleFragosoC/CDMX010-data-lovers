@@ -2,80 +2,75 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="fontello.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!--Obtener iconos-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </head>
   <body>
+<!--     <div id="root"></div>-->
+<!--       <div id="page-one" claas="stars">
+        <h1 class="typing"><strong>Welcome to Rick & Morty Universe</strong></h1>
+          <center>
+            <button value="inicio" style="cursor:pointer" id="next" class="btn-siguiente">Go!</button>
+          </center>
+       </div>-->
 
-    <div id="page">
-      <!--<div id="header">Rick and Morty Universe</div>
-      <div id="content"> -->
-        
-      <div id="displayOne" >
-        <div>
-          <img src="img/Logo.png">
-          <!--<h1>Rick y Morty :D</h1>-->
-          <h2>La principal funcionalidad de esta app web, es poder introducir a nuevos 
-            usuarios al mundo de Rick y Morty, llevándolos a conocer a los personajes a través de distintas categorías.</h2>
-          <center><button type="submit" id="next" class="boton">COMENZAR</button></center> 
-        </div>
-      </div>
-          
-      </div>
-  </div>
+       <div id="page-two" class="stars-two">
+           <div id="header" class="header">
+            <nav id="menu">
+                <div class="barra">
+                    <input type="checkbox"/>
+                        <label><i aria-hidden="true" class="fa fa-bars"></i></label>
+                        <ul class="principal">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Sobre mi</a></li>
+                        <li><a href="#">FILTER<i class="fa fa-chevron-down"></i></a>
+                          <ul class="menus">
+                          <li><a href="#">GENDER<i class="fa fa-chevron-down"></i></a>
+                          <ul class="sub-menu">
+                            <li><a href="#">FEMALE</a>
+                            <li><a href="#">MALE</a>
+                            <li><a href="#">UNKNOWN</a>
+                          </ul>
+                        </li>
+                          <li><a href="#">ORIGIN<i class="fa fa-chevron-down"></i></a>
+                          <ul class="sub-menu">
+                            <li><a href="#">ORIGIN 1</a></li>
+                          </ul>
+                        </li>
+                          <li><a href="#">STATUS<i class="fa fa-chevron-down"></i></a>
+                          </li>
+                          <ul class="sub-menu"></ul>
+                          <option name="alive" value="alive" id="alive">Alive</option>
+                          </ul>
+                        </li>
+                        <li><a href="#">ORDER<i class="fa fa-chevron-down"></i></a>
+                          <ul class="menus">
+                          <li><a href="#">A-Z</a></li>
+                          <li><a href="#">Z-A</a></li>
+                          </ul>
+                        </li>
 
-    <div id="root"></div>
+                        </ul>
+                </div>
+            </nav> 
+           </div>
+
+           <div id="footer" class="footer">
+             <!-- <p class="propiedad">DataLovers 2021 <br> By Jessi&Mich </br></p> -->
+            <div class="iconos">
+              <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a>
+              <a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a>
+              <a href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a>
+            </div>
+           </div>
+       </div>
     <script src="main.js" type="module"></script>
-
-
-      <div id="displayTwo" style="display:none">
-        <header>
-          <div class="ancho">
-              <div claas="logo">
-                  <p><a href="index.html">RICK & MORTY</a></p>
-              </div>
-              <nav>
-                  <ul>
-                      <li><a href="#">FILTER</a></li>
-                      <li><a href='#'>Name</a></li>
-                      <li><a href='#'>Gener</a></li>
-                      <li><a href='#'>Origin</a></li>
-                  </ul>
-              </nav>
-          </div>
-        </header>
-
-
-        <!--<nav id='menu'>
-    <div class='barra'>
-        <input type='checkbox'/>
-            <label><i aria-hidden='true' class='fa fa-bars'/></label>
-            <ul class='principal'>
-            <li><a href='/'>Inicio</a></li>
-            <li><a href='#'>Sobre mi</a></li>
-            <li><a href='#'>Filtrar<i class="fa fa-chevron-down"></i></a>
-                <ul class='menus'>
-                <li><a href='#'>Categoría 1</a></li>
-                <li><a href='#'>Categoría 2</a></li>
-                <li><a href='#'>Categoría 3</a></li>
-                </ul>
-              </li>
-            <li><a href='#'>Contacto</a></li>
-            </ul>
-        <div class='iconos'>
-            <a href='#'><i aria-hidden='true' class='fa fa-twitter'/></a>
-            <a href='#'><i aria-hidden='true' class='fa fa-facebook'/></a>
-            <a href='#'><i aria-hidden='true' class='fa fa-instagram'/></a>
-            <a href='#'><i aria-hidden='true' class='fa fa-pinterest-p'/></a>
-          </div>
-    </div>
-</nav>-->
-          <h2>Personajes</h2>
-          <div id="area"></div>
-      </div>
-
-
-      </div>
   </body>
-  <!--<div id="footer">Data Lovers 2021 By: Jess&Mich <br> Equipo Dinámita</div>-->
 </html>
