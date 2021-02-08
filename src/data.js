@@ -15,6 +15,7 @@ export const filterByGender = function(personajes, gender) {
   return filteredData;
 };
 
+//----------------------FILTER GENDER-----------------------------
 export function filterFemale(personajes, gender) { 
   const filterForFemale= personajes.filter(element=> element.gender === gender);
   return filterForFemale;
@@ -30,6 +31,7 @@ export function filterUnknown(personajes, gender) {
   return filterForUnkwon;
 }
 
+//--------------------FILTER STATUS----------------------------
 //export function filterAlive(personajes, status) {
 //  const filterForAlive= personajes.filter(element=> element.status === status);
 //  return filterForAlive;
