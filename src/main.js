@@ -121,8 +121,7 @@ document.getElementById("next").addEventListener("click", ()=>{
 
 
 //---- -------------PRINT SORT-----------------------------
-//Ordenamiento
-const order = document.getElementById('select-order');
+const order = document.getElementById('selectByOrder');
     order.addEventListener ('change', (event) => {
     const sortOrder = event.target.value;
     const orderedData = orderData(data.results, 'name', sortOrder)
