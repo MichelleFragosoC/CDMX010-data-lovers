@@ -94,21 +94,12 @@ radioUnknownGender.addEventListener('click', (event) => {
 //    })
 //});
 
-
-//Función para el botón de la primer pantalla
-// document.getElementById('next').addEventListener("click", function(){
-//    page-one.style.display = 'none'; //Ocultar
-//    page-two.style.display = 'block'; //Mostrar
-//});
 // ---------------------ESTA PARTE YA FUNCIONA-------------------------
 document.getElementById("next").addEventListener("click", ()=>{
     document.getElementById("page-one").style.display = "none"; //ocultar
     document.getElementById("page-two").style.display = "block"; //mostrar
     createCards(personajes);
 }); 
-
-
-
 
 //**Impresión de Género**
 //document.addEventListener('DOMContentLoaded',()=>{

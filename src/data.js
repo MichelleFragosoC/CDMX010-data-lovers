@@ -1,5 +1,4 @@
 // estas funciones son de ejemplo
-
 export const example = () => {
   return 'example';
 };
@@ -45,18 +44,6 @@ export function filterUnknown(personajes, gender) {
 //  const filterUnknown= personajes.filter(element=> element.status === status);
 //  return filterUnknown;
 //}
-
-//export function orderAsc(personajes, name) {
-//  const orderName = personajes.sort((a,b) => a.name.localeCompare(b.name));
-//  return orderName;
-//}
-
-//--------------SORT ASC ---------------------
-//export const sortAsc (personajes, name) => {
-//  const sortName = personajes.sort((a,b) => a.name.localeCompare(b.name));
-//  return sortName;
-//};
-
 
 //-------------SORT DATA------------------------------
 //Si el orden seleccionado es a-z, organiza y retorna la data con el nuevo orden
