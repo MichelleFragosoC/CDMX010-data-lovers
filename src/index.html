@@ -34,6 +34,12 @@
                           <ul class="menus">
                           <li><a href="#" id="filterByGender">GENDER<i class="fa fa-chevron-down"></i></a>
                           <ul class="sub-menu">
+                            <select name="gender" id="selectByGender" class="select-gender">
+                              <li><option value="">Gender</option></li>
+                              <li><option value="female" id="alive">Female</option></li>
+                              <li><option value="male" id="dead">Male</option></li>
+                              <li><option value="unknown" id="unknownGender">Unknown</option></li>
+                            </select>
                             <li><a href="#" id="filterFemale">FEMALE</a>
                             <li><a href="#" id="filterMale">MALE</a>
                             <li><a href="#" id="filterUnknown">UNKNOWN</a>
@@ -45,7 +51,7 @@
                               <li><option value="">Species</option></li>
                               <li><option value="alive" id="alive">Alive</option></li>
                               <li><option value="dead" id="dead">Dead</option></li>
-                              <li><option value="unknown">Unknown</option></li>
+                              <li><option value="unknown" id="unknownSpeciesg">Unknown</option></li>
                             </select> 
                             <li><a href="#">HUMAN</a></li>
                           </ul>
@@ -61,7 +67,7 @@
                             <select name="order" id="selectByOrder" class="select-order">
                               <li><option value="">SORT BY </option></li>
                               <li><option value="sortAZ">A-Z </option></li>
-                              <li><option value="sortAZ"> Z-A</option></li>
+                              <li><option value="sortZA"> Z-A</option></li>
                             </select>
                           <!--SE DEBE MODIFICAR-->
                             <input id="sortAZ" name="sort" value="sortAZ"> 

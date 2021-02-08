@@ -1,4 +1,4 @@
-import { orderData } from './data.js';
+import { orderData, } from './data.js';
 //import data from './data/rickandmorty/rickandmorty.js';
 //Importando funciones de data.js
 //import {filterFemale, filterMale, filterUnknown} from './data.js'; 

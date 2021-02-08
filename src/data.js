@@ -58,13 +58,12 @@ export const orderData = (data, sortBy, sortOrder) =>{
     });
     return sortAZ;
 } 
-  
-  else if (sortBy === 'name' && sortOrder === 'orderZa'){
-    const orderZa = data.sort((a,b) => {
+  else if (sortBy === 'name' && sortOrder === 'sortZA'){
+    const sortZA = data.sort((a,b) => {
       if (a.name > b.name) return -1;
       if (b.name < b.name) return 1;
       return 0;
     });
-  return orderZa;
+  return sortZA;
 }
 }
