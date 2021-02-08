@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fontello.css" />
+    <!--<link rel="stylesheet" href="fontello.css" />-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
@@ -39,24 +39,31 @@
                             <li><a href="#" id="filterUnknown">UNKNOWN</a>
                           </ul>
                         </li>
-                          <li><a href="#" id="filterByOrigin">ORIGIN<i class="fa fa-chevron-down"></i></a>
+                          <li><a href="#" id="filterByOrigin">SPECIES<i class="fa fa-chevron-down"></i></a>
                           <ul class="sub-menu">
-                            <li><a href="#">ORIGIN 1</a></li>
+                            <li><a href="#">HUMAN</a></li>
                           </ul>
                         </li>
                           <li><a href="#" id="filterByStatus">STATUS<i class="fa fa-chevron-down"></i></a>
                           </li>
                           <ul class="sub-menu"></ul>
-                          <option name="alive" value="alive" id="alive">Alive</option>
+                          
                           </ul>
                         </li>
-                        <li><a href="#" id="sort">ORDER<i class="fa fa-chevron-down"></i></a>
+                        <li><a href="#" id="sort">ORDER</a>
                           <ul class="menus">
+                            <select name="order" id="select-order">
+                              <li><option value="">SORT BY: </option></li>
+                              <li><option value="sortAZ">A-Z </option></li>
+                              <option value="sortAZ"> Z-A</option>
+                            </select>
+                          <!--SE DEBE MODIFICAR-->
+                            <input id="sortAZ" name="sort" value="sortAZ"> 
                           <li><a href="#" id="sortAsc">A-Z</a></li>
-                          <li><a href="#" id="sortDesc">Z-A</a></li>
+                          <li><option value="sortAZ">ASCENDENTE</option></li>
+                          <li><a href="#" id="sortDesc" value="sortAZ">Z-A</a></li>
                           </ul>
                         </li>
-
                         </ul>
                 </div>
             </nav> 
@@ -64,11 +71,10 @@
           </div>
 
           <!----------IMPRIMIR DATA------------>
-          <h1><strong>H O O O O O L A</strong></h1>
           <section id="area"></section>
 
           <div id="footer" class="footer">
-            <!-- <p class="propiedad">DataLovers 2021 <br> By: Jess&Mich </br></p> -->
+            <p>Data Lovers 2021 By: Jess&Mich </p> 
             <div class="iconos">
               <a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a>
               <a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a>

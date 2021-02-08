@@ -26,6 +26,7 @@ padding-left: 0px;
 
 .stars{
   position:absolute;
+  overflow: scroll; /*Fija el fondo y este se queda estatico*/
   top:0;
   left:0;
   right:0;
@@ -66,7 +67,7 @@ padding-left: 0px;
   text-align: center;
   font-size: 100px;
   font-weight: 300;
-  border-right: .15em solid transparent;
+  /*border-right: .15em solid transparent;*/
   white-space: nowrap;
   overflow: hidden;
   width: 15em;
@@ -169,55 +170,7 @@ padding-left: 0px;
   border-color: transparent;
 }
 }
-/*---------------Pa---------------*/
-
-
-/*----------------page-two-------------*/
-#page-two{
-  width: 100%; /*ancho*/
-  height: 100vh;
-  display: inline-block;
-  background-color: white; 
-  background-size: 100%;
-  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
-}
-
-.stars-two{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
-  z-index:-2;
-
-  -moz-animation:move-twink-back 100s linear infinite;
-  -ms-animation:move-twink-back 100s linear infinite;
-  -o-animation:move-twink-back 100s linear infinite;
-  -webkit-animation:move-twink-back 100s linear infinite;
-  animation:move-twink-back 100s linear infinite;
-}
-
-@keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-
+/*---------------BUTTON---------------*/
 /* Para el boton de siguiente */
 .btn-siguiente{
   cursor:pointer;
@@ -265,11 +218,61 @@ text-decoration: none;
   }
 }
 
+/*----------------page-two-------------*/
+#page-two{
+  width: 100%; /*ancho*/
+  height: 100vh;
+  display: inline-block;
+  background-color: white; 
+  background-size: 100%;
+  background:#000 url(http://1.bp.blogspot.com/-q7NYia_DjQI/U4t7_J4gwwI/AAAAAAAAMKo/nru4YxfjK6I/s1600/estrellas.png) repeat top center;
+}
+
+.stars-two{
+  position:absolute;
+  overflow: scroll; /*Fija el fondo y este se queda estatico*/
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  background-repeat: repeat;
+  background:transparent url(http://3.bp.blogspot.com/-FwB8aSiMBmI/U4t9MkimRrI/AAAAAAAAMK0/FAlqX8ZFyu8/s1600/twinkling.png) repeat top center;
+  z-index:-2;
+
+  -moz-animation:move-twink-back 100s linear infinite;
+  -ms-animation:move-twink-back 100s linear infinite;
+  -o-animation:move-twink-back 100s linear infinite;
+  -webkit-animation:move-twink-back 100s linear infinite;
+  animation:move-twink-back 100s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+
 /*---------------For menu-----------------------*/
 #header{
   width:100%; /*ancho*/
   height: 50px;
   background: #E1EB0D;
+  position: fixed;
   box-sizing: border-box; /*para que no se agrande el contenedor*/
 }
 .barra{
@@ -405,11 +408,7 @@ top: -1px;
 /* #menu .iconos .fa:hover{
 color: #999;/*color del icono social al pasar el ratón
 } */
-h1{
-  font-size: 20px;
-  color: white;
-  font-family: 'Yusei Magic', sans-serif;
-}
+
 /*-------------CARDS----------------------*/
 #area{
   display: flex;
@@ -448,7 +447,7 @@ h4{
   bottom: 0;
   width: 100%; /*ancho*/
   height: 50px;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   background: #111;
   background: rgba(0,0,0,.90);
   border-top: 2px solid #f00;
@@ -463,7 +462,11 @@ h4{
   color: white;
   position: fixed;
   text-align: center;
-}
+
+  padding: 10px;
+  height: 50px;
+  display: inline-block;
+} 
 /* #footer {
   background: yellow;
   color: #fff;
@@ -502,10 +505,13 @@ h4{
 #footer .iconos .fa:hover{
   color: #999;/*color del icono social al pasar el ratón*/
 }
+
 #footer .p {
+  padding: 0 10px;
   font-weight: bold;
   font-family: 'Yusei Magic', sans-serif;
-}
+  display: inline-block;
+} 
 
 /*-------------------RESPONSIVE--------------------------*/
 
