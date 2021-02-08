@@ -310,6 +310,14 @@ float:right;
   font: 14px Arial, sans-serif;/*tamaño y fuente del texto */
   font-weight: bold; /*Letras en negrita*/
 }
+#menu{ /*Opciones fijas en el menú*/
+  float:left;  /*Colocación de los bloques con las opciones*/
+  display:inline;
+  background: #E1EB0D;/* #e7f125; /*Para el color de las sub-categorías*/
+  position:relative;
+  font: 14px Arial, sans-serif;/*tamaño y fuente del texto */
+  font-weight: bold; /*Letras en negrita*/
+}
 
 #menu ul a{
   display: block;
