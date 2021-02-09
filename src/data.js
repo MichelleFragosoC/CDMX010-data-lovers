@@ -8,12 +8,13 @@ export const anotherExample = () => {
 };
 
 //-------------FILTER BY GENDER--------------
-export const filterByGender = function(personajes, gender) { 
+export function filterByGender(personajes, gender) { 
   const filteredData = personajes.filter(function(result) {
     return result.gender === gender;  
   });
   return filteredData;
-};
+}
+
 
 //----------------------FILTER GENDER-----------------------------
 export function filterFemale(personajes, gender) { 
@@ -32,20 +33,7 @@ export function filterUnknown(personajes, gender) {
 }
 
 //--------------------FILTER STATUS----------------------------
-//export function filterAlive(personajes, status) {
-//  const filterForAlive= personajes.filter(element=> element.status === status);
-//  return filterForAlive;
-//}
 
-//export function filterDead(personajes, status) {
-//  const filterForDead= personajes.filter(element=> element.status === status);  
-//  return filterForDead;
-//}
-
-//export function filterSunknown(personajes, status) {
-//  const filterUnknown= personajes.filter(element=> element.status === status);
-//  return filterUnknown;
-//}
 
 //-------------SORT DATA------------------------------
 //Si el orden seleccionado es a-z, organiza y retorna la data con el nuevo orden

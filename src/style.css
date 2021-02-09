@@ -63,11 +63,12 @@ padding-left: 0px;
   to {background-position:-10000px 5000px;}
 }
 
-.typing  {  /*Titulo de pantalla*/
+
+.typing  { /*h1*/
   text-align: center;
   font-size: 100px;
   font-weight: 300;
-  /*border-right: .15em solid transparent;*/
+  border-right: .15em solid transparent;
   white-space: nowrap;
   overflow: hidden;
   width: 15em;
@@ -118,58 +119,6 @@ padding-left: 0px;
 }
 }
 
-.typing  {  /*ESTE TYPING ME PARECE QUE ES EL QUE DESAJUSTA LA PANTALLA*/
-  text-align: center;
-  font-size: 70px;
-  font-weight: 300;
-  border-right: .15em solid transparent;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 26em;
-  -webkit-animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
-  animation: type 5s steps(40, end), blink .5s step-end infinite alternate;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  font-family: 'Creepster';
-  color: #16ACC9;
-  text-shadow: 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B, 0 0 0.2em #D2DA4B;
-  -webkit-text-stroke: 1px #0E3D46;
-}
-
-@keyframes type {
-0% {
-  width: 0;
-}
-1% {
-  opacity: 1;
-}
-100% {
-  opacity: 1;
-}
-}
-
-@-webkit-keyframes type {
-0% {
-  width: 0;
-}
-1% {
-  opacity: 1;
-}
-100% {
-  opacity: 1;
-}
-}
-
-@keyframes blink {
-50% {
-  border-color: transparent;
-}
-}
-@-webkit-keyframes blink {
-50% {
-  border-color: transparent;
-}
-}
 /*---------------BUTTON---------------*/
 /* Para el boton de siguiente */
 .btn-siguiente{
@@ -269,12 +218,14 @@ text-decoration: none;
 
 /*---------------For menu-----------------------*/
 #header{
-  width:100%; /*ancho*/
+  width:  100%; /* 146.5vh; ancho*/ 
   height: 50px;
   background: #E1EB0D;
   position: fixed;
+  top:0;
   box-sizing: border-box; /*para que no se agrande el contenedor*/
 }
+
 .barra{
   width:950px;/*ancho*/
   margin:0 auto;
@@ -360,7 +311,7 @@ transition: all .1s ease-in-out;
 
 #menu ul.menus{
   height: auto;
-overflow: hidden;
+  overflow: hidden;
 width: 170px; /*ancho*/
 background: #F1F1F1;/*color del fondo del submenu*/
 position: absolute;
@@ -368,12 +319,13 @@ z-index: 99;
 display: none;
 border: 1px solid rgba(0,0,0,.05);
 }
+
 #menu ul.menus li{
   display: block; /*Se ven visibles las opciones del menú*/
   width: 100%; /*ancho*/
   font: 12px  Arial, sans-serif;/*tamaño y fuente del  texto del submenu*/
   text-transform: uppercase; /*Trasnforma las minúsculas*/
-border-bottom: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9;
 }
 #menu ul.menus li:last-child{
 border-bottom:none;
@@ -428,17 +380,18 @@ color: #999;/*color del icono social al pasar el ratón
 .card img{
   width: 80%;
   border: 5px solid black;
+  /*border-radius: 40%;*/
 }
 
 .card{
-  width: 40%;
+  width: 30%; /*40%*/
   margin: 30px 30px 30px 30px;
   background: #fff;
   padding: 25px 25px 25px 25px;
   text-align: center;
   box-shadow: 1px 1px 11px 0px #00000030;
   background-color: rgba(73, 248, 11, 0.87);
-  width: 326px;
+  width: 200px; /*326px*/
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -451,7 +404,7 @@ h4{
 }
 
 #footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%; /*ancho*/
   height: 50px;

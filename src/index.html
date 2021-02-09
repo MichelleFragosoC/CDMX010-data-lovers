@@ -14,12 +14,12 @@
   </head>
   <body>
 <!--     <div id="root"></div>-->
-      <div id="page-one" claas="stars">
+<!--      <div id="page-one" claas="stars">
         <h1 class="typing"><strong>Welcome to Rick & Morty Universe</strong></h1>
           <center>
             <button value="inicio" id="next" class="btn-siguiente">Go!</button>
           </center>
-      </div>
+      </div>-->
 
       <div id="page-two" class="stars-two">
           <div id="header" class="header">
@@ -32,17 +32,17 @@
                         <li><a href="#">Sobre mi</a></li>
                         <li><a href="#" id="filter">FILTER<i class="fa fa-chevron-down"></i></a>
                           <ul class="menus">
-                          <li><a href="#" id="filterByGender">GENDER<i class="fa fa-chevron-down"></i></a>
+                          <li><a href="#" id="gender">GENDER</a>
                           <ul class="sub-menu">
                             <select name="gender" id="selectByGender" class="select-gender">
                               <li><option value="">Gender</option></li>
-                              <li><option value="female" id="alive">Female</option></li>
-                              <li><option value="male" id="dead">Male</option></li>
-                              <li><option value="unknown" id="unknownGender">Unknown</option></li>
+                              <li><option  value="Female" id="female">Female</option></li>
+                              <li><option name="gender" value="Male" id="filterMale">Male</option></li>
+                              <li><option name="gender" value="unknown" id="filterUnknownGender">Unknown</option></li>
                             </select>
-                            <li><a href="#" id="filterFemale">FEMALE</a>
+                            <!--<li><a href="#" id="filterFemale">FEMALE</a>
                             <li><a href="#" id="filterMale">MALE</a>
-                            <li><a href="#" id="filterUnknown">UNKNOWN</a>
+                            <li><a href="#" id="filterUnknown">UNKNOWN</a>-->
                           </ul>
                         </li>
                           <li><a href="#" id="filterByOrigin">SPECIES<i class="fa fa-chevron-down"></i></a>
@@ -51,7 +51,7 @@
                               <li><option value="">Species</option></li>
                               <li><option value="alive" id="alive">Alive</option></li>
                               <li><option value="dead" id="dead">Dead</option></li>
-                              <li><option value="unknown" id="unknownSpeciesg">Unknown</option></li>
+                              <li><option value="unknown" id="unknownSpecies">Unknown</option></li>
                             </select> 
                             <li><a href="#">HUMAN</a></li>
                           </ul>
@@ -67,13 +67,13 @@
                             <select name="order" id="selectByOrder" class="select-order">
                               <li><option value="">SORT BY </option></li>
                               <li><option value="sortAZ">A-Z </option></li>
-                              <li><option value="sortZA"> Z-A</option></li>
+                              <li><option value="sortZA">Z-A</option></li>
                             </select>
                           <!--SE DEBE MODIFICAR-->
-                            <input id="sortAZ" name="sort" value="sortAZ"> 
+                          <!--  <input id="sortAZ" name="sort" value="sortAZ"> 
                           <li><a href="#" id="sortAsc">A-Z</a></li>
                           <li><option value="sortAZ">ASCENDENTE</option></li>
-                          <li><a href="#" id="sortDesc" value="sortAZ">Z-A</a></li>
+                          <li><a href="#" id="sortDesc" value="sortAZ">Z-A</a></li>-->
                           </ul>
                         </li>
                         </ul>
