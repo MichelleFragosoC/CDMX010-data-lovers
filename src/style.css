@@ -446,7 +446,7 @@ h4{
   line-height: 40px;
 } */
 #footer .iconos{
-  float:right;
+  float:center;
 }
 .iconos a{
   padding: 0 10px;
