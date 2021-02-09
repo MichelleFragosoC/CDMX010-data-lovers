@@ -10,7 +10,6 @@ export const anotherExample = () => {
 //----------------------FILTER GENDER-----------------------------
 export function filterByGender (personajes, gender) {
   if(gender === 'Female'){
-    //function filterFemale(personajes, gender) {
       const filterByFemale= personajes.filter(element=> element.gender === gender);
       return filterByFemale;
   }
@@ -45,7 +44,22 @@ export function filterByStatus(personajes, status){
 }
 
 //-------------------FILTER SPECIES------------------------------------
+export function filterBySpecies(personajes, species){
+  if(species === 'Alien'){
+      const filterByAlien= personajes.filter(element=> element.species === species);
+      return filterByAlien;
+  }
 
+  else if(species === 'Human'){
+    const filterByDead= personajes.filter(element=> element.species === species);
+    return filterByDead;
+  }
+
+  else if(species === 'Humanoid'){
+    const filterByHumanoid= personajes.filter(element=> element.species === species);
+    return filterByHumanoid;
+  }
+}
 //-------------------FILTER TYPE-------------------------------
 
 //-------------SORT DATA------------------------------

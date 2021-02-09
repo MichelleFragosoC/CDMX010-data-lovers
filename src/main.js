@@ -3,8 +3,9 @@ import {filterByGender, filterByStatus, orderData } from './data.js';
 
 //------DECLARACIÓN DE VARIABLES---------------
 let personajes = data.results;
-let filterGender= document.getElementById('filGender');
-let filterStatus= document.getElementById('filStatus');
+let filterGender= document.getElementById('selectByGender');
+let filterStatus= document.getElementById('selectByStatus');
+let filterSpecies =document.getElementById('selectBySpecies');
 const order = document.getElementById('order');
 
 document.addEventListener('DOMContentLoaded',()=>{
@@ -36,19 +37,19 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     filterGender.addEventListener('change',(e)=>{
 
-        const user = e.target.value;
-        console.log("Estoy escuchando el",user)
+        const userGender = e.target.value;
+        console.log("Estoy escuchando el",userGender)
 
-        if(user === "fem"){
-            const genderF = filterByGender(personajes, 'Female', user);
+        if(userGender === "fem"){
+            const genderF = filterByGender(personajes, 'Female', userGender);
             createCards(genderF);
         }
-        else if(user === "mal"){
-            const genderM = filterByGender(personajes, 'Male', user);
+        else if(userGender === "mal"){
+            const genderM = filterByGender(personajes, 'Male', userGender);
             createCards(genderM); 
         }
-        else if(user === "unk"){
-            const genderU = filterByGender(personajes, 'unknown', user);
+        else if(userGender === "unk"){
+            const genderU = filterByGender(personajes, 'unknown', userGender);
             createCards(genderU); 
         }
         else{
@@ -56,6 +57,27 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
     })
 
+    filterSpecies.addEventListener('change',(e)=>{
+
+        const userSpecies = e.target.value;
+        console.log("Estoy escuchando el evento ", userSpecies)
+
+        if(userSpecies === "alien"){
+            const speciesA = filterByGender(personajes, 'Alien', userSpecies);
+            createCards(speciesA);
+        }
+        else if(userSpecies === "human"){
+            const speciesH = filterByGender(personajes, 'Human', userSpecies);
+            createCards(speciesH); 
+        }
+        else if(userSpecies === "humanoid"){
+            const speciesHd = filterByGender(personajes, 'Humanoid', userSpecies);
+            createCards(speciesHd); 
+        }
+        else{
+            console.log('Nada');
+        }
+    })
         order.addEventListener ('change', (event) => {
             const sortOrder = event.target.value;
             const orderedData = orderData(personajes, 'name', sortOrder)
