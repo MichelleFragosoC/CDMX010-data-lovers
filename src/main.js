@@ -1,6 +1,12 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import { orderData,  } from './data.js';
-import {filterByGender} from './data.js'; 
+import {filterByGender, filterByStatus, orderData } from './data.js';
+
+//------DECLARACIÓN DE VARIABLES---------------
+let personajes = data.results;
+let filGender= document.getElementById('filGender');
+let filStatus= document.getElementById('filStatus');
+const order = document.getElementById('order');
+
 
 const female = document.getElementById('female');
 
@@ -15,9 +21,6 @@ document.addEventListener('DOMContentLoaded',function(){
 });  
 
 })
-
-//------DECLARACIÓN DE VARIABLES---------------
-let personajes = data.results;
 
 //----Imprimer CARD de personajes-----------
 const createCards = data => {
