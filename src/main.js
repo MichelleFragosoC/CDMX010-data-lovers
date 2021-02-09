@@ -7,48 +7,23 @@ let filGender= document.getElementById('filGender');
 let filStatus= document.getElementById('filStatus');
 const order = document.getElementById('order');
 
-
-document.addEventListener('DOMContentLoaded',function(){
-    createCards(data.results) 
-})
-
-//----Imprimer CARD de personajes-----------
-const createCards = data => {
-    let showAll = data.map((element) =>{
-        return  `
-            <div class="card">
-                <img src="${element.image}"/> 
-                <div>
-                    <h4> Name: ${element.name}</h4>
-                    <p class="status">  Status: ${element.status}</p>
-                    <p class="gender">  Gender: ${element.gender}</p>
-                    <p class="origin">  Origin: ${element.origin.name}</p>
-                    <p class="species"> Species: ${element.species}</p>
-                    <p class="type">    Type: ${element.type}</p>
-                </div>
-            </div> 
-            `;
-        }).join(" ");
-        document.getElementById("area").innerHTML = showAll;
-}
-//console.log(personajes)
-
 document.addEventListener('DOMContentLoaded',()=>{
+    createCards(personajes);
     
     filStatus.addEventListener('change',(e)=>{
         const userStatus = e.target.value;
 
             console.log("Estoy escuchando el", userStatus)
     
-            if(userStatus === "ali"){
+            if(userStatus === "alive"){
                 const statusA = filterByStatus(personajes, 'Alive', userStatus);
                 createCards(statusA);
             }
-            else if(userStatus === "dea"){
+            else if(userStatus === "dead"){
                 const statusD = filterByStatus(personajes, 'Dead', userStatus);
                 createCards(statusD); 
             }
-            else if(userStatus === "uns"){
+            else if(userStatus === "unknownS"){
                 const statusU = filterByStatus(personajes, 'unknown', userStatus);
                 createCards(statusU); 
             }
@@ -56,11 +31,10 @@ document.addEventListener('DOMContentLoaded',()=>{
                 console.log('Nada');
             } 
 
- 
-         console.log("Estoy escuchando el", e.target.value)
-     })
+        console.log("Estoy escuchando el", e.target.value)
+    })
 
-     filGender.addEventListener('change',(e)=>{
+    filGender.addEventListener('change',(e)=>{
 
         const user = e.target.value;
         console.log("Estoy escuchando el",user)
@@ -90,6 +64,26 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 });
 
+//----Imprimer CARD de personajes-----------
+const createCards = data => {
+    let showAll = data.map((element) =>{
+        return  `
+            <div class="card">
+                <img src="${element.image}"/> 
+                <div>
+                    <h4> Name: ${element.name}</h4>
+                    <p class="status">  Status: ${element.status}</p>
+                    <p class="gender">  Gender: ${element.gender}</p>
+                    <p class="origin">  Origin: ${element.origin.name}</p>
+                    <p class="species"> Species: ${element.species}</p>
+                    <p class="type">    Type: ${element.type}</p>
+                </div>
+            </div> 
+            `;
+        }).join(" ");
+        document.getElementById("area").innerHTML = showAll;
+}
+//console.log(personajes)
 
 
 //----------------FILTER BY Género ---------------

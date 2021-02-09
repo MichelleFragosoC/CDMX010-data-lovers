@@ -34,11 +34,11 @@
                           <ul class="menus">
                           <li><a href="#" id="gender">GENDER</a>
                           <ul class="sub-menu">
-                            <select name="gender" id="selectByGender" class="select">
+                            <select name="gender" id="filGender" class="select-style">
                               <option value="">Gender</option></li>
-                              <option value="Female" id="female">Female</option>
-                              <option name="gender" value="Male" id="filterMale">Male</option>
-                              <option name="gender" value="unknown" id="filterUnknownGender">Unknown</option>
+                              <option name="female" value="fem" id="female">Female</option>
+                              <option name="male" value="mal" id="male">Male</option>
+                              <option name="unknown" value="unk" id="unknown">Unknown</option>
                             </select>
                             <!--<li><a href="#" id="filterFemale">FEMALE</a>
                             <li><a href="#" id="filterMale">MALE</a>
@@ -49,9 +49,9 @@
                           <ul class="sub-menu">
                             <select name="origin" id="selectByOrigin" class="select">
                               <option value="">Origin</option></li>
-                              <option  value="Female" id="female">Female</option>
-                              <option name="gender" value="Male" id="filterMale">Male</option>
-                              <option name="gender" value="unknown" id="filterUnknownGender">Unknown</option>
+                              <option  value="Female" id="">Female</option>
+                              <option name="gender" value="" id="filterMale">Male</option>
+                              <option name="gender" value="" id="filterUnknownGender">Unknown</option>
                             </select>
                           </ul>
                         </li>
@@ -69,11 +69,11 @@
 
                           <li><a href="#" id="filterByStatus">STATUS<i class="fa fa-chevron-down"></i></a>
                           <ul class="sub-menu">
-                            <select name="status" id="selectByStatus" class="select-status">
+                            <select name="Status" id="filStatus" class="select-status">
                               <option value="">Status</option>
                               <option value="alive" id="alive">Alive</option>
                               <option value="dead" id="dead">Dead</option>
-                              <option value="unknown" id="unknownSttus">Unknown</option>
+                              <option value="unknownS" id="unknownS">Unknown</option>
                             </select> 
                           </ul>
                         </li>
@@ -94,7 +94,7 @@
 
                         <li><a href="#" id="sort">ORDER</a>
                           <ul class="menus">
-                            <select name="order" id="selectByOrder" class="select-order">
+                            <select name="order" id="order" class="select-order">
                               <option value="">SORT BY </option>
                               <option value="sortAZ">A-Z </option>
                               <option value="sortZA">Z-A</option>

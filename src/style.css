@@ -230,12 +230,13 @@ text-decoration: none;
   margin:0 auto;
 }
 
-#select{
+/* #select{
   background: #E1EB0D;
   position:relative;
   font: 14px Arial, sans-serif;/*tamaño y fuente del texto */
-  font-weight: bold; /*Letras en negrita*/
-}
+/*  font-weight: bold; /*Letras en negrita*/
+/*} */
+
 #menu{
   background: #E1EB0D;
   /*background: #F1F1F1;/* color de la barra*/
