@@ -3,14 +3,14 @@ import {filterByGender, filterByStatus, orderData } from './data.js';
 
 //------DECLARACIÓN DE VARIABLES---------------
 let personajes = data.results;
-let filGender= document.getElementById('filGender');
-let filStatus= document.getElementById('filStatus');
+let filterGender= document.getElementById('filGender');
+let filterStatus= document.getElementById('filStatus');
 const order = document.getElementById('order');
 
 document.addEventListener('DOMContentLoaded',()=>{
     createCards(personajes);
     
-    filStatus.addEventListener('change',(e)=>{
+    filterStatus.addEventListener('change',(e)=>{
         const userStatus = e.target.value;
 
             console.log("Estoy escuchando el", userStatus)
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         console.log("Estoy escuchando el", e.target.value)
     })
 
-    filGender.addEventListener('change',(e)=>{
+    filterGender.addEventListener('change',(e)=>{
 
         const user = e.target.value;
         console.log("Estoy escuchando el",user)
