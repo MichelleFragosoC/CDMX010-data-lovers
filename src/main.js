@@ -8,18 +8,8 @@ let filStatus= document.getElementById('filStatus');
 const order = document.getElementById('order');
 
 
-const female = document.getElementById('female');
-
 document.addEventListener('DOMContentLoaded',function(){
     createCards(data.results) 
-    female.addEventListener ('change', (event) => {
-        console.log(event)
-    const gender = event.target.value;
-    const filteredData = filterByGender(data.personajes, gender)
-    personajes.innerHTML=''
-    //createCards(filteredData)
-});  
-
 })
 
 //----Imprimer CARD de personajes-----------
@@ -43,20 +33,78 @@ const createCards = data => {
 }
 //console.log(personajes)
 
+document.addEventListener('DOMContentLoaded',()=>{
+    
+    filStatus.addEventListener('change',(e)=>{
+        const userStatus = e.target.value;
+
+            console.log("Estoy escuchando el", userStatus)
+    
+            if(userStatus === "ali"){
+                const statusA = filterByStatus(personajes, 'Alive', userStatus);
+                createCards(statusA);
+            }
+            else if(userStatus === "dea"){
+                const statusD = filterByStatus(personajes, 'Dead', userStatus);
+                createCards(statusD); 
+            }
+            else if(userStatus === "uns"){
+                const statusU = filterByStatus(personajes, 'unknown', userStatus);
+                createCards(statusU); 
+            }
+            else{
+                console.log('Nada');
+            } 
+
+ 
+         console.log("Estoy escuchando el", e.target.value)
+     })
+
+     filGender.addEventListener('change',(e)=>{
+
+        const user = e.target.value;
+        console.log("Estoy escuchando el",user)
+
+        if(user === "fem"){
+            const genderF = filterByGender(personajes, 'Female', user);
+            createCards(genderF);
+        }
+        else if(user === "mal"){
+            const genderM = filterByGender(personajes, 'Male', user);
+            createCards(genderM); 
+        }
+        else if(user === "unk"){
+            const genderU = filterByGender(personajes, 'unknown', user);
+            createCards(genderU); 
+        }
+        else{
+            console.log('Nada');
+        }
+    })
+
+        order.addEventListener ('change', (event) => {
+            const sortOrder = event.target.value;
+            const orderedData = orderData(personajes, 'name', sortOrder)
+            createCards(orderedData);
+        })
+
+});
+
+
+
 //----------------FILTER BY Género ---------------
 
 
 //---------------FILTER BY STATUS-----------------------
 
-
 //---- -------------PRINT SORT-----------------------------
-const order = document.getElementById('selectByOrder');
+/* const order = document.getElementById('selectByOrder');
     order.addEventListener ('change', (event) => {
     const sortOrder = event.target.value;
     const orderedData = orderData(data.results, 'name', sortOrder)
     personajes.innerHTML=''
     createCards(orderedData)
-});
+}); */
 
 // ---------------------ESTA PARTE YA FUNCIONA-------------------------
 /* document.getElementById("next").addEventListener("click", ()=>{
