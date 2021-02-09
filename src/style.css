@@ -230,6 +230,12 @@ text-decoration: none;
   margin:0 auto;
 }
 
+#select{
+  background: #E1EB0D;
+  position:relative;
+  font: 14px Arial, sans-serif;/*tamaño y fuente del texto */
+  font-weight: bold; /*Letras en negrita*/
+}
 #menu{
   background: #E1EB0D;
   /*background: #F1F1F1;/* color de la barra*/
@@ -249,10 +255,8 @@ z-index:101;
   padding:0 0;
   list-style:none;
 }
-/* #menu .iconos{
-float:right;
-} */
-#menu li{ /*Opciones gijas en el menú*/
+
+#menu li{ /*Opciones fijas en el menú*/
   float:left;  /*Colocación de los bloques con las opciones*/
   display:inline;
   background: #E1EB0D;/* #e7f125; /*Para el color de las sub-categorías*/
@@ -272,7 +276,7 @@ float:right;
 #menu ul a{
   display: block;
   line-height: 50px;  /*Centrar el texto*/
-padding: 0 14px;
+  padding: 0 14px;
   color: #333;/*color del texto*/
   text-transform: uppercase;/*letras mayúsculas*/
   letter-spacing: 3.5px;/*espacio entre letras*/
@@ -345,29 +349,12 @@ display:block;
 -o-transition: all .1s ease-in-out;
 transition: all .1s ease-in-out;
 }
-/* .iconos a{
-padding: 0 10px;
-height: 50px;
-display: inline-block;
-} */
-/* #menu .iconos .fa{
-font-size:14px;
-line-height: 50px;
-color: #333;/*color del icono social*/
-/*-webkit-transition: all .1s ease-in-out;
--moz-transition: all .1s ease-in-out;
--ms-transition: all .1s ease-in-out;
--o-transition: all .1s ease-in-out;
-transition: all .1s ease-in-out;
-} */
+
 #menu ul .fa{
   font-size: 8px; /*Tamaño de la letra*/
 position: relative;
 top: -1px;
 }
-/* #menu .iconos .fa:hover{
-color: #999;/*color del icono social al pasar el ratón
-} */
 
 /*-------------CARDS----------------------*/
 #area{
