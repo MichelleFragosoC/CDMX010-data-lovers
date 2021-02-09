@@ -36,7 +36,7 @@ export function filterUnknown(personajes, gender) {
 
 
 //-------------SORT DATA------------------------------
-//Si el orden seleccionado es a-z, organiza y retorna la data con el nuevo orden
+//Si el orden seleccionado es a-z, organiza y retorna la data 
 export const orderData = (data, sortBy, sortOrder) =>{
   if(sortBy === 'name' && sortOrder === 'sortAZ'){
       const sortAZ = data.sort((a,b) => {
@@ -46,6 +46,7 @@ export const orderData = (data, sortBy, sortOrder) =>{
     });
     return sortAZ;
 } 
+//Si el orden seleccionado es z-a, organiza y retorna la data 
   else if (sortBy === 'name' && sortOrder === 'sortZA'){
     const sortZA = data.sort((a,b) => {
       if (a.name > b.name) return -1;
