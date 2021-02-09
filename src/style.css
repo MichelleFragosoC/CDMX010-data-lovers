@@ -304,14 +304,14 @@ transition: all .1s ease-in-out;
   height: 50px;
   line-height: 50px;/*para centrar el icono de menu */
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   vertical-align: middle;
 }
 
 #menu ul.menus{
   height: auto;
   overflow: hidden;
-width: 170px; /*ancho*/
+  width: 170px; /*ancho*/
 background: #F1F1F1;/*color del fondo del submenu*/
 position: absolute;
 z-index: 99;
@@ -327,11 +327,12 @@ border: 1px solid rgba(0,0,0,.05);
   border-bottom: 1px solid #E9E9E9;
 }
 #menu ul.menus li:last-child{
-border-bottom:none;
+  border-bottom:none;
 }
+
 #menu ul.menus a{
   color: #333;/*color del  texto del submenu*/
-line-height: 35px;
+  line-height: 35px;
 }
 #menu li:hover ul.menus{
 display:block;
