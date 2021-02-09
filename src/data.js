@@ -1,39 +1,52 @@
 // estas funciones son de ejemplo
-export const example = () => {
+/* export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
-};
-
-//-------------FILTER BY GENDER--------------
-export function filterByGender(personajes, gender) { 
-  const filteredData = personajes.filter(function(result) {
-    return result.gender === gender;  
-  });
-  return filteredData;
-}
-
+}; */
 
 //----------------------FILTER GENDER-----------------------------
-export function filterFemale(personajes, gender) { 
-  const filterForFemale= personajes.filter(element=> element.gender === gender);
-  return filterForFemale;
-}
+export function filterByGender (personajes, gender) {
+  if(gender === 'Female'){
+    //function filterFemale(personajes, gender) {
+      const filterByFemale= personajes.filter(element=> element.gender === gender);
+      return filterByFemale;
+  }
 
-export function filterMale(personajes, gender) {
-  const filterForMale= personajes.filter(element=> element.gender === gender);
-  return filterForMale;
-}
+  else if(gender === 'Male'){
+    const filterByMale= personajes.filter(element=> element.gender === gender);
+    return filterByMale;
+  }
 
-export function filterUnknown(personajes, gender) {
-  const filterForUnkwon= personajes.filter(element=> element.gender===gender); 
-  return filterForUnkwon;
-}
+  else if(gender === 'unknown'){
+    const filterByUnkwonG= personajes.filter(element=> element.gender===gender);
+    return filterByUnkwonG;
+  }
+} 
 
 //--------------------FILTER STATUS----------------------------
+export function filterByStatus(personajes, status){
+  if(status === 'Alive'){
+      const filterByAlive= personajes.filter(element=> element.status === status);
+      return filterByAlive;
+  }
 
+  else if(status === 'Dead'){
+    const filterByDead= personajes.filter(element=> element.status === status);
+    return filterByDead;
+  }
+
+  else if(status === 'unknown'){
+    const filterByUnkwonS= personajes.filter(element=> element.status === status);
+    return filterByUnkwonS;
+  }
+}
+
+//-------------------FILTER SPECIES------------------------------------
+
+//-------------------FILTER TYPE-------------------------------
 
 //-------------SORT DATA------------------------------
 //Si el orden seleccionado es a-z, organiza y retorna la data 

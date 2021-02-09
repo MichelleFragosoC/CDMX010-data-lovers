@@ -45,23 +45,50 @@
                             <li><a href="#" id="filterUnknown">UNKNOWN</a>-->
                           </ul>
                         </li>
-                          <li><a href="#" id="filterByOrigin">SPECIES<i class="fa fa-chevron-down"></i></a>
+                          <li><a href="#" id="filterByStatus">STATUS<i class="fa fa-chevron-down"></i></a>
                           <ul class="sub-menu">
-                            <select name="species" id="selectBySpecies" class="select-species">
-                              <option value="">Species</option>
+                            <select name="status" id="selectByStatus" class="select-status">
+                              <option value="">Status</option>
                               <option value="alive" id="alive">Alive</option>
                               <option value="dead" id="dead">Dead</option>
-                              <option value="unknown" id="unknownSpecies">Unknown</option>
+                              <option value="unknown" id="unknownSttus">Unknown</option>
                             </select> 
                             <li><a href="#">HUMAN</a></li>
                           </ul>
                         </li>
-                          <li><a href="#" id="filterByStatus">STATUS<i class="fa fa-chevron-down"></i></a>
+                          <li><a href="#" id="filterBySpecies">SPECIES<i class="fa fa-chevron-down"></i></a>
                           </li>
                           <ul class="sub-menu"></ul>
-                          
+                          <select name="species" id="selectBySpecies" class="select-species">
+                            <option value="">Species</option>
+                            <option value="alien" id="alive">Alien</option>
+                            <option value="human" id="dead">Human</option>
+                            <option value="humanoid" id="humanoid">Humanoid</option>
+                          </select>
                           </ul>
                         </li>
+                        <li><a href="#" id="filterByType">TYPE<i class="fa fa-chevron-down"></i></a>
+                          </li>
+                          <ul class="sub-menu"></ul>
+                          <select name="type" id="selectByType" class="select-type">
+                            <option value="">Type</option>
+                            <option value="cromulon" id="cromulon">Cromulon</option>
+                            <option value="dead" id="FishPerson">Fish Person</option>
+                            <option value="humanWithAntennae" id="humanWithAntennae">Human with antennae</option>
+                          </select>
+                          </ul>
+                        </li>
+                        <li><a href="#" id="filterByOrigin">ORIGIN<i class="fa fa-chevron-down"></i></a>
+                        </li>
+                        <ul class="sub-menu"></ul>
+                        <select name="origin" id="selectByOrigin" class="select-origin">
+                          <option value="">Origin</option>
+                          <option value="alive" id="alive">Alive</option>
+                          <option value="dead" id="dead">Dead</option>
+                          <option value="unknown" id="unknownOrigin">Unknown</option>
+                        </select>
+                        </ul>
+                      </li>
                         <li><a href="#" id="sort">ORDER</a>
                           <ul class="menus">
                             <select name="order" id="selectByOrder" class="select-order">
