@@ -45,53 +45,6 @@ const createCards = data => {
 
 //----------------FILTER BY Género ---------------
 
-//console.log(filterByGender(data.personajes, 'Female'))
-
-//document.addEventListener('DOMContentLoaded',()=>{
-//const genderFemale = document.getElementById('selectByGender');
-//genderFemale.addEventListener('change', (event) => {
-//    const gender = event.target.value;     
-//    const filteredCharacters = filterByGender(data.results, gender) 
-//    personajes.innerHTML=''
-//    createCards(filteredCharacters)
-//})
-//const filMale = document.getElementById('filterMale');
-//filMale.addEventListener('click', (event) => {
-//    const gender = event.target.value;     
-//    const filteredCharacters = filterByGender(data.results, gender) 
-//    personajes.innerHTML=''
-//    createCards(filteredCharacters)
-//})
-//})
-
-//***********Impresión de Filtro de Estado*******************
-//document.addEventListener('DOMContentLoaded',()=>{
-//    filterByStatus.addEventListener('change',(e)=>{
-//        createCards(filterAlive(personajes,e.target.value ));
-//        createCards(filterDead(personajes,e.target.value ));
-//        createCards(filterSunknown(personajes,e.target.value ));
- //       console.log("Estoy escuchando el", e.target.value)
-//    })
-//});
-//console.log(filterFemale(personajes, 'Female'));
-
-
-// ---------------------ESTA PARTE YA FUNCIONA-------------------------
-/* document.getElementById("next").addEventListener("click", ()=>{
-    document.getElementById("page-one").style.display = "none"; //ocultar
-    document.getElementById("page-two").style.display = "block"; //mostrar
-    createCards(personajes);
-/*});  */
-
-//**Impresión de Género**
-//document.addEventListener('DOMContentLoaded',()=>{
-//    filterByGender.addEventListener('change',(e)=>{
-//        createCards(filterFemale(personajes,e.target.value ));
-//        createCards(filterMale(personajes,e.target.value ));
-//        createCards(filterUnknown(personajes,e.target.value ));
-//        console.log("Estoy escuchando el", e.target.value)
-//    })
-//});
 
 //---------------FILTER BY STATUS-----------------------
 
@@ -104,3 +57,10 @@ const order = document.getElementById('selectByOrder');
     personajes.innerHTML=''
     createCards(orderedData)
 });
+
+// ---------------------ESTA PARTE YA FUNCIONA-------------------------
+/* document.getElementById("next").addEventListener("click", ()=>{
+    document.getElementById("page-one").style.display = "none"; //ocultar
+    document.getElementById("page-two").style.display = "block"; //mostrar
+    createCards(personajes);
+/*});  */
