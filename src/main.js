@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {filterByGender, filterByStatus, orderData } from './data.js';
+import {filterByGender, filterByStatus,filterBySpecies, orderData } from './data.js';
 
 //------DECLARACIÓN DE VARIABLES---------------
 let personajes = data.results;
@@ -63,15 +63,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         console.log("Estoy escuchando el evento ", userSpecies)
 
         if(userSpecies === "alien"){
-            const speciesA = filterByGender(personajes, 'Alien', userSpecies);
+            const speciesA = filterBySpecies(personajes, 'Alien', userSpecies);
             createCards(speciesA);
         }
         else if(userSpecies === "human"){
-            const speciesH = filterByGender(personajes, 'Human', userSpecies);
+            const speciesH = filterBySpecies(personajes, 'Human', userSpecies);
             createCards(speciesH); 
         }
         else if(userSpecies === "humanoid"){
-            const speciesHd = filterByGender(personajes, 'Humanoid', userSpecies);
+            const speciesHd = filterBySpecies(personajes, 'Humanoid', userSpecies);
             createCards(speciesHd); 
         }
         else{
