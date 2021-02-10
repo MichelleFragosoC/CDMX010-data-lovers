@@ -1,85 +1,75 @@
-// estas funciones son de ejemplo
-//import data from './data/pokemon/pokemon.js';
-//import rickandmorty from './data/rickandmorty/rickandmorty.js';
-//import { data } from './data.js';
-//export const rickandmorty = data.results;
+//----------------------FILTER GENDER-----------------------------
+export function filterByGender (personajes, gender) {
+  if(gender === 'Female'){
+      const filterByFemale= personajes.filter(element=> element.gender === gender);
+      return filterByFemale;
+  }
 
-//export const pokemons = data.pokemon;
+  else if(gender === 'Male'){
+    const filterByMale= personajes.filter(element=> element.gender === gender);
+    return filterByMale;
+  }
 
-export const example = () => {
-  return 'example';
-};
- 
-export const anotherExample = () => {
-  return 'OMG';
-};
+  else if(gender === 'unknown'){
+    const filterByUnkwonG= personajes.filter(element=> element.gender===gender);
+    return filterByUnkwonG;
+  }
+} 
 
-//export const printData = (personajes) => {
- // const printPersonajes = 
-//};
+//--------------------FILTER STATUS----------------------------
+export function filterByStatus(personajes, status){
+  if(status === 'Alive'){
+      const filterByAlive= personajes.filter(element=> element.status === status);
+      return filterByAlive;
+  }
 
-// export function filterFemale(personajes, gender) {
+  else if(status === 'Dead'){
+    const filterByDead= personajes.filter(element=> element.status === status);
+    return filterByDead;
+  }
 
-//   const filterForFemale= personajes.filter(allData=> allData.gender===gender);
-  
-//   return filterForFemale;
-// };
+  else if(status === 'unknown'){
+    const filterByUnkwonS= personajes.filter(element=> element.status === status);
+    return filterByUnkwonS;
+  }
+}
 
-export function filterFemale(personajes, gender) {
-  
-  const filterForFemale= personajes.filter(element=> element.gender === gender);
-  return filterForFemale;
-};
+//-------------------FILTER SPECIES------------------------------------
+export function filterBySpecies(personajes, species){
+  if(species === 'Alien'){
+      const filterByAlien= personajes.filter(element=> element.species === species);
+      return filterByAlien;
+  }
 
-export function filterMale(personajes, gender) {
+  else if(species === 'Human'){
+    const filterByDead= personajes.filter(element=> element.species === species);
+    return filterByDead;
+  }
 
-  const filterForMale= personajes.filter(element=> element.gender === gender);
-  
-  return filterForMale;
-};
+  else if(species === 'Humanoid'){
+    const filterByHumanoid= personajes.filter(element=> element.species === species);
+    return filterByHumanoid;
+  }
+}
 
-export function filterUnknown(personajes, gender) {
-
-  const filterForUnkwon= personajes.filter(element=> element.gender===gender);
-  
-  return filterForUnkwon;
-};
-
-export function filterAlive(personajes, status) {
-
-  const filterForAlive= personajes.filter(element=> element.status === status);
-  
-  return filterForAlive;
-};
-
-export function filterDead(personajes, status) {
-
-  const filterForDead= personajes.filter(element=> element.status === status);
-  
-  return filterForDead;
-};
-
-export function filterSunknown(personajes, status) {
-
-  const filterUnknown= personajes.filter(element=> element.status === status);
-  
-  return filterUnknown;
-};
-
-export function orderAsc(personajes, name) {
-
-  const orderName = personajes.sort((a,b) => a.name.localeCompare(b.name));
-  return orderName;
-
-};
-
-// export function orderDes(personajes, name) {
-
-//   const orderName2 = personajes.sort((a,b) => b.name.localeCompare(a.name));
-//   return orderName2;
-
-// };
-
-//const orderName = personajes.sort((a,b) => a.name > b.name);
-
-//export default data;
+//-------------SORT DATA------------------------------
+//Si el orden seleccionado es a-z, organiza y retorna la data 
+export const orderData = (data, sortBy, sortOrder) =>{
+  if(sortBy === 'name' && sortOrder === 'sortAZ'){
+      const sortAZ = data.sort((a,b) => {
+      if (a.name < b.name) return -1;
+      if (b.name > b.name) return 1;
+      return 0;
+    });
+    return sortAZ;
+} 
+//Si el orden seleccionado es z-a, organiza y retorna la data 
+  else if (sortBy === 'name' && sortOrder === 'sortZA'){
+    const sortZA = data.sort((a,b) => {
+      if (a.name > b.name) return -1;
+      if (b.name < b.name) return 1;
+      return 0;
+    });
+  return sortZA;
+}
+}
