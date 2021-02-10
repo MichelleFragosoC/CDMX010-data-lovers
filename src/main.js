@@ -111,15 +111,3 @@ document.getElementById("next").addEventListener("click", ()=>{
     document.getElementById("page-two").style.display = "block"; //mostrar
     createCards(personajes);
 });  
-
-
-
-
-
-
-
-
-
-
-
-
