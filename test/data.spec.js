@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+/* import { example, anotherExample } from '../src/data.js';
 
 
 describe('example', () => {
@@ -21,13 +21,13 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
-
+ */
 //---------------------------------------------------------------
 
 import { filterByGender, filterByStatus, orderData} from '../src/data.js';
-import rickandmorty from '../src/data/rickandmorty/rickandmorty.js';
+import data from '../src/data/rickandmorty/rickandmorty.js';
 
-let personajes = rickandmorty.results;
+let personajes = data.results;
 
 describe('filterByGender', () => {
   it('is a function', () => {

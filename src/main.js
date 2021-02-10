@@ -107,12 +107,6 @@ const createCards = data => {
 }
 //console.log(personajes)
 
-
-//----------------FILTER BY Género ---------------
-
-
-//---------------FILTER BY STATUS-----------------------
-
 //---- -------------PRINT SORT-----------------------------
 /* const order = document.getElementById('selectByOrder');
     order.addEventListener ('change', (event) => {
