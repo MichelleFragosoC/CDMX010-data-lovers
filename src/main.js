@@ -1,43 +1,92 @@
-import {filterFemale, filterMale, filterUnknown, filterAlive, filterDead, filterSunknown, orderAsc } from './data.js';
-import rickandmorty from './data/rickandmorty/rickandmorty.js';
+import data from './data/rickandmorty/rickandmorty.js';
+import {filterByGender, filterByStatus,filterBySpecies, orderData } from './data.js';
 
-let personajes = rickandmorty.results;
-let filGender= document.getElementById('filGender');
-let filStatus= document.getElementById('filStatus');
-let boton = document.getElementById('hamburguer');
-let buttonAll = document.getElementById('showAll');
-let orderA = document.getElementById('order');
+//------DECLARACIÓN DE VARIABLES---------------
+let personajes = data.results;
+let filterGender= document.getElementById('selectByGender');
+let filterStatus= document.getElementById('selectByStatus');
+let filterSpecies =document.getElementById('selectBySpecies');
+const order = document.getElementById('order');
 
-//**Impresión de Género**
 document.addEventListener('DOMContentLoaded',()=>{
-    filGender.addEventListener('change',(e)=>{
-        createCards(filterFemale(personajes,e.target.value ));
-        createCards(filterMale(personajes,e.target.value ));
-        createCards(filterUnknown(personajes,e.target.value ));
+    createCards(personajes);
+    
+    filterStatus.addEventListener('change',(e)=>{
+        const userStatus = e.target.value;
+
+            console.log("Estoy escuchando el", userStatus)
+    
+            if(userStatus === "alive"){
+                const statusA = filterByStatus(personajes, 'Alive', userStatus);
+                createCards(statusA);
+            }
+            else if(userStatus === "dead"){
+                const statusD = filterByStatus(personajes, 'Dead', userStatus);
+                createCards(statusD); 
+            }
+            else if(userStatus === "unknownS"){
+                const statusU = filterByStatus(personajes, 'unknown', userStatus);
+                createCards(statusU); 
+            }
+            else{
+                console.log('Nada');
+            } 
+
         console.log("Estoy escuchando el", e.target.value)
     })
-});
 
-//**Impresión de Filtro de Estado**
-document.addEventListener('DOMContentLoaded',()=>{
-    filStatus.addEventListener('change',(e)=>{
-        createCards(filterAlive(personajes,e.target.value ));
-        createCards(filterDead(personajes,e.target.value ));
-        createCards(filterSunknown(personajes,e.target.value ));
-        console.log("Estoy escuchando el", e.target.value)
+    filterGender.addEventListener('change',(e)=>{
+
+        const userGender = e.target.value;
+        console.log("Estoy escuchando el",userGender)
+
+        if(userGender === "fem"){
+            const genderF = filterByGender(personajes, 'Female', userGender);
+            createCards(genderF);
+        }
+        else if(userGender === "mal"){
+            const genderM = filterByGender(personajes, 'Male', userGender);
+            createCards(genderM); 
+        }
+        else if(userGender === "unk"){
+            const genderU = filterByGender(personajes, 'unknown', userGender);
+            createCards(genderU); 
+        }
+        else{
+            console.log('Nada');
+        }
     })
-});
-console.log(filterFemale(personajes, 'Female'));
 
-//**Impresión de ordenamiento**
-document.addEventListener("DOMContentLoaded",()=>{
-    orderA.addEventListener('click', (e)=>{
-        createCards(orderAsc(personajes,e.target.value ));
-        console.log("Estoy escuchando el Ordenamiento", e.target.value)
+    filterSpecies.addEventListener('change',(e)=>{
+
+        const userSpecies = e.target.value;
+        console.log("Estoy escuchando el evento ", userSpecies)
+
+        if(userSpecies === "alien"){
+            const speciesA = filterBySpecies(personajes, 'Alien', userSpecies);
+            createCards(speciesA);
+        }
+        else if(userSpecies === "human"){
+            const speciesH = filterBySpecies(personajes, 'Human', userSpecies);
+            createCards(speciesH); 
+        }
+        else if(userSpecies === "humanoid"){
+            const speciesHd = filterBySpecies(personajes, 'Humanoid', userSpecies);
+            createCards(speciesHd); 
+        }
+        else{
+            console.log('Nada');
+        }
     })
+        order.addEventListener ('change', (event) => {
+            const sortOrder = event.target.value;
+            const orderedData = orderData(personajes, 'name', sortOrder)
+            createCards(orderedData);
+        })
+
 });
 
-//**Tarjetas**
+//----Imprimer CARD de personajes-----------
 const createCards = data => {
     let showAll = data.map((element) =>{
         return  `
@@ -45,66 +94,23 @@ const createCards = data => {
                 <img src="${element.image}"/> 
                 <div>
                     <h4> Name: ${element.name}</h4>
-                    <p class="status"> Status: ${element.status}</p>
-                    <p class="gender"> Gender: ${element.gender}</p>
-                    <p class="origin"> Origin: ${element.origin.name}</p>
-                    <p> Species: ${element.species}</p>
-                    <p> Type: ${element.type}</p>
+                    <p class="status">  Status: ${element.status}</p>
+                    <p class="gender">  Gender: ${element.gender}</p>
+                    <p class="origin">  Origin: ${element.origin.name}</p>
+                    <p class="species"> Species: ${element.species}</p>
+                    <p class="type">    Type: ${element.type}</p>
                 </div>
             </div> 
             `;
         }).join(" ");
         document.getElementById("area").innerHTML = showAll;
 }
- 
-        document.getElementById('next').addEventListener("click", function(){
-            displayOne.style.display = 'none'; //Ocultar
-            displayTwo.style.display = 'block'; //Mostrar
-        
-            createCards(personajes);
 
-            buttonAll.addEventListener("click", ()=>{
-                createCards(personajes);
-            })
-
-        // **Función del menú hamburguesa**   
-
-        function showMenu(){
-             let menu = document.getElementById('options-menu');
-
-            if(menu.classList.contains("disabled-menu")){ /*Si el elemento contiene la lista*/
-                menu.classList.remove("disabled-menu"); /*quitar clase*/
-                menu.classList.add("enabled-menu"); /*agregar clase que muestra elementos*/
-            }
-
-            else{
-                menu.classList.remove("enabled-menu"); /*quitar elementos de mostrar*/
-                menu.classList.add("disabled-menu"); /*agregar clase que oculta el menu*/
-            }
-        }
-
-        boton.addEventListener("click", showMenu);
-
-
-    // //     console.log(genderUser);
-    /*
-    console.log(filterFemale(personajes, 'Female'));
-    console.log(filterMale(personajes, 'Male'));
-    console.log(filterUnknown(personajes, 'unknown'));
-    console.log(filterAlive(personajes, 'Alive'));
-    console.log(filterDead(personajes, 'Dead'));
-    console.log(filterSunknown(personajes, 'unknown'));
-    console.log(orderAsc(personajes, 'name'));
-    */
-   // console.log(orderDes(personajes, 'name'));
-     });
-
-    
-
-
-
-
-
+document.getElementById("next").addEventListener("click", ()=>{
+    document.getElementById("page-one").style.display = "none"; //ocultar
+    document.getElementById("page-two").style.display = "block"; //mostrar
+    createCards(personajes);
+});  
 
 
 
