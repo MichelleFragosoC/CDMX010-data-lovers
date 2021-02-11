@@ -3,7 +3,7 @@
 * [1. Definición de producto](#1-Definición de producto)
 * [2. Historias de usuario](#1-Historias de usuario)
 
-## 1 Definición de producto
+## 1. Definición de producto
 El siguiente producto esta basado en crear una appWeb en la cual diferentes tipos de usuarios que esten interesados en conocer más acerca de la serie de "Rick and Morty" se puedan familiarizar con los personajes y sus características a través de pequeñas cartas en las cuales se especifícan los detalles más revelantes de estos.
 
 ## 2.1 Historias de usuario 1
