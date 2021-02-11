@@ -9,7 +9,7 @@ El siguiente producto esta basado en crear una appWeb en la cual diferentes tipo
 ## 2.1 Historias de usuario 1
 Yo como usuario quiero acceder a la web y visualizar a los personajes de la serie.
 
-## 2.12 Historias de usuario 2
+## 2.2 Historias de usuario 2
 Yo como usuario quiero poder interactuar en la página y tener una opción que me permita realizar diferentes filtros para poder conocer más a fondo las características de los personajes.
 
 ## 2.3 Historias de usuario 3
